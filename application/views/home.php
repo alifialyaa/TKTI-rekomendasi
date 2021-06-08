@@ -275,6 +275,8 @@
                         </label>
                     </div>
                 </div>
+
+                
   
                       </div>
         
@@ -282,6 +284,7 @@
                     </div>
                 </div>
             </div>
+            <a href="kuesioner.php" class="btn-learn-more">Isi Data Awal</a>
             </div>
 
             
