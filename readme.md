@@ -1,10 +1,5 @@
-###################
-FP TKTI
-###################
-
-**************************
-Changelog and New Features
-**************************
+# FP TKTI #
+## Changelog and New Features ##
 09.06.2021
 - Tambah View
 - Database 
