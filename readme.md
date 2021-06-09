@@ -11,5 +11,5 @@ input data yang sudah (pertabel):
 - [ ] pertanyaan (baru PO1)
 - [ ] rekomendasi
 
-
+Semangat gaes kita pasti bisa! <3
 
