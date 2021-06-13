@@ -34,6 +34,10 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+  </style>
 </head>
 
 <body>
@@ -42,20 +46,18 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">TKTI</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="<?php echo base_url(); ?>img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <h1 class="logo mr-auto"><a href="index.html">TKTI</a></h1> -->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#team">Anggota</a></li>
+          <li class="active"><a href="index">Home</a></li>
+          <li class="active"><a href="#about">About</a></li>
+          <li class="active"><a href="#team">Team</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Mulai</a>
+      <!-- <a href="#about" class="get-started-btn scrollto">Mulai</a> -->
 
     </div>
   </header><!-- End Header -->
@@ -68,9 +70,8 @@
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Rekomendasi Tata Kelola Teknologi Informasi</h1>
           <h2>Kenali apa yang kurang dari perusahaan Anda!</h2>
-          <div class="d-lg-flex">
-            <a href="#about" class="btn-get-started scrollto">Mulai</a>
-            <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a> -->
+          <div class="d-lg-flex"><center>
+            <a href="<?php echo site_url('form/index') ?>" class="btn-get-started scrollto">Mulai</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -99,7 +100,7 @@
               Web ini akan memberikan rekomendasi tata kelola teknologi informasi pada perusahaan Anda. Anda akan mendapatkan hasil analisis mengenai apa saja yang perusahaan Anda butuhkan.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Rekomendasi dibuat berdasarkan COBIT 4.1.</li>
+              <li><i class="ri-check"></i> Rekomendasi dibuat berdasarkan COBIT 4.1.</li>
               <li><i class="ri-check-double-line"></i> Anda akan mengetahui maturity level perusahaan Anda sekarang.</li>
               <li><i class="ri-check-double-line"></i> Anda akan mendapatkan rekomendasi tata kelola teknologi informasi.</li>
             </ul>
@@ -108,246 +109,11 @@
             <p>
               Pada web ini, Anda diharuskan untuk memilih jenis perusahaan, IT resource, proses teknologi informasi, dan mengisi kuesioner yang kami berikan. Kuesioner diisi sesuai dengan keadaan perusahaan saat ini. Rekomendasi akan diberikan setelah kuesioner diisi. 
             </p>
-            <a href="#why-us" class="btn-learn-more">Isi Data Awal</a>
           </div>
         </div>
 
       </div>
     </section><!-- End About Us Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="content">
-              <h3><strong>Isi Data Awal</strong></h3>
-              <p>
-                Ada beberapa data awal yang harus diisi sebelum mengisi kuesioner. Data tersebut adalah jenis perusahaan, jenis IT resource, dan jenis proses teknologi informasi.
-              </p>
-
-              <div class="row">
-                <div class="form-group">
-                    <div class="items-collection">
-                      <div class="form-check form-check-inline">
-                        <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                          <div class="info-block block-info clearfix">
-                              <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                  <label class="btn btn-secondary">
-                                      <div class="itemcontent">
-                                          <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                          <span class="fa fa-car fa-2x"></span>
-                                          <h5>Start-up</h5>
-                                      </div>
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                          <div class="info-block block-info clearfix">
-                              <div data-toggle="buttons" class="btn-group itemcontent">
-                                  <label class="btn btn-secondary">
-                                      <div class="itemcontent">
-                                          <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                          <span class="fa fa-truck fa-2x"></span>
-                                          <h5>Perusahaan Kecil (?)</h5>
-                                      </div>
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                          <div class="info-block block-info clearfix">
-                              <div data-toggle="buttons" class="btn-group itemcontent">
-                                  <label class="btn btn-secondary">
-                                      <div class="itemcontent">
-                                          <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                          <span class="fa fa-laptop fa-2x"></span>
-                                          <h5>Perusahaan Besar</h5>
-                                      </div>
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                      </div>
-                
-                      <div class="form-check form-check-inline">
-                        <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                          <div class="info-block block-info clearfix">
-                              <div data-toggle="buttons" class="btn-group itemcontent">
-                                  <label class="btn btn-secondary">
-                                      <div class="itemcontent">
-                                          <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                          <span class="fa fa-cube fa-2x"></span>
-                                          <h5>Application</h5>
-                                      </div>
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                        <div class="info-block block-info clearfix">
-                            <div data-toggle="buttons" class="btn-group itemcontent">
-                                <label class="btn btn-secondary">
-                                    <div class="itemcontent">
-                                        <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                        <span class="fa fa-cube fa-2x"></span>
-                                        <h5>Information</h5>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                      <div class="info-block block-info clearfix">
-                          <div data-toggle="buttons" class="btn-group itemcontent">
-                              <label class="btn btn-secondary">
-                                  <div class="itemcontent">
-                                      <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                      <span class="fa fa-cube fa-2x"></span>
-                                      <h5>Infrastructure</h5>
-                                  </div>
-                              </label>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <div class="info-block block-info clearfix">
-                        <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-secondary">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                    <span class="fa fa-cube fa-2x"></span>
-                                    <h5>People</h5>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-  
-                      </div>
-  
-                      <div class="form-check form-check-inline">
-                        <div class="info-block block-info clearfix">
-                          <div data-toggle="buttons" class="btn-group itemcontent">
-                              <label class="btn btn-secondary">
-                                  <div class="itemcontent">
-                                      <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                      <span class="fa fa-cube fa-2x"></span>
-                                      <h5>PO (Plan and Organize)</h5>
-                                  </div>
-                              </label>
-                          </div>
-                      </div>
-                      <div class="info-block block-info clearfix">
-                        <div data-toggle="buttons" class="btn-group itemcontent">
-                            <label class="btn btn-secondary">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                    <span class="fa fa-cube fa-2x"></span>
-                                    <h5>AI (Acquire and Implement)</h5>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="info-block block-info clearfix">
-                      <div data-toggle="buttons" class="btn-group itemcontent">
-                          <label class="btn btn-secondary">
-                              <div class="itemcontent">
-                                  <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                  <span class="fa fa-cube fa-2x"></span>
-                                  <h5>DS (Deliver and Support)</h5>
-                              </div>
-                          </label>
-                      </div>
-                  </div>
-                  <div class="info-block block-info clearfix">
-                    <div data-toggle="buttons" class="btn-group itemcontent">
-                        <label class="btn btn-secondary">
-                            <div class="itemcontent">
-                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                <span class="fa fa-cube fa-2x"></span>
-                                <h5>ME (Monitor and Evaluate)</h5>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                
-  
-                      </div>
-        
-        
-                    </div>
-                </div>
-            </div>
-            <a href="kuesioner.php" class="btn-learn-more">Isi Data Awal</a>
-            </div>
-
-            
-
-            <!-- <div class="accordion-list">
-              <ul>
-                <li>
-                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> PO (Plan and Organize) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
-                    <p> 
-                      <a href="PO1.html" >PO1: Define a Strategic IT Plan.</a> 
-                      <a href="https://www.w3schools.com/" >PO2: Define the Information Architecture.</a>
-                      <a href="https://www.w3schools.com/" >PO3: Determine Technological Direction.</a>
-                      <a href="https://www.w3schools.com/" >PO4: Define the IT Process, Organization, and Relationships.</a>
-                      <a href="https://www.w3schools.com/" >PO5: Manage the IT Investment.</a>
-                      <a href="https://www.w3schools.com/" >PO6: Communicate Management Aims and Direction.</a>
-                      <a href="https://www.w3schools.com/" >PO7: Manage IT Human Resources</a>
-                      <a href="https://www.w3schools.com/" >PO8: Manage Quality</a>
-                      <a href="https://www.w3schools.com/" >PO9: Assess and Manage IT Risks</a>
-                      <a href="https://www.w3schools.com/" >PO10: Manage Projects.</a>                    
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> AI (Acquire and Implement) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-parent=".accordion-list"> -->
-                    <!-- <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </p> -->
-                  <!-- </div>
-                </li>
-
-                <li>
-                  <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> DS (Deliver and Support) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-parent=".accordion-list"> -->
-                    <!-- <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p> -->
-                  <!-- </div>
-                </li>
-
-                <li>
-                  <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span> ME (Monitor and Evaluate) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-parent=".accordion-list"> -->
-                    <!-- <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p> -->
-                  <!-- </div>
-                </li>
-
-              </ul>
-            </div> -->
-
-          </div>
-
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("<?php echo base_url(); ?>img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg" >
@@ -362,7 +128,6 @@
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="<?php echo base_url(); ?>img/team/flo.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Alifiannisa Alyahasna Wighneswara</h4>
                 <span>05111740000011</span>
@@ -379,7 +144,6 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="<?php echo base_url(); ?>img/team/flo.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Yuki Yanuar Ratna</h4>
                 <span>05111740000023</span>
@@ -396,7 +160,6 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="<?php echo base_url(); ?>img/team/flo.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Miranda Manurung</h4>
                 <span>05111740000144</span>
@@ -413,7 +176,6 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="<?php echo base_url(); ?>img/team/flo.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Vania Cikanindi</h4>
                 <span>05111740000193</span>
@@ -521,7 +283,7 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
 
   <!-- Vendor JS Files -->
   <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>

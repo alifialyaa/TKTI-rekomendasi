@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kuesioner extends CI_Controller {
+class Perusahaan extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +18,17 @@ class Kuesioner extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("perusahaan_model");
+        $this->load->library('form_validation');
+    }
+
 	public function index()
 	{
-		$this->load->view('kuesioner');
+        $data["perusahaan"] = $this->perusahaan_model->getAll();
+		$this->load->view('perusahaan', $data);
 	}
 }

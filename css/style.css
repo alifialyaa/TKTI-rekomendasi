@@ -542,6 +542,12 @@ section {
   padding-bottom: 30px;
 }
 
+.section-title2 {
+  padding-bottom: 0px;
+  background: #f3f5fa;
+  color: #37517e;
+}
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
@@ -1534,7 +1540,7 @@ section {
 .breadcrumbs {
   padding: 15px 0;
   background: #f3f5fa;
-  min-height: 40px;
+  min-height: 30px;
   margin-top: 72px;
 }
 

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kuesioner extends CI_Controller {
+class Rekomendasi extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,6 @@ class Kuesioner extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('kuesioner');
+		$this->load->view('rekomendasi');
 	}
 }
