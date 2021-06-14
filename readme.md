@@ -17,7 +17,7 @@ input data yang sudah (pertabel):
 - [ ] rekomendasi (PO1-PO10)
 ---
 14.06.21
-- [ ] pemetaan dari jenis perusahaan ke IT Process (single choice IT resource)
+- [x] pemetaan dari jenis perusahaan ke IT Process (single choice IT resource)
 
 Semangat gaes kita pasti bisa! <3
 
