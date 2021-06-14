@@ -15,7 +15,9 @@ input data yang sudah (pertabel):
 - Database
 - [ ] pertanyaan (PO1-AI7)
 - [ ] rekomendasi (PO1-PO10)
-
+---
+14.06.21
+- [ ] pemetaan dari jenis perusahaan ke IT Process (single choice IT resource)
 
 Semangat gaes kita pasti bisa! <3
 
