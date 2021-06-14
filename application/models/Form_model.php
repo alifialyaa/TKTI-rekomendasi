@@ -2,7 +2,7 @@
 
 class Form_model extends CI_Model
 {
-    private $_table = "perusahaan";
+    private $_table = "jenis_perusahaan";
     private $_table2 = "it_resource";
     private $_table3 = "domain";
 

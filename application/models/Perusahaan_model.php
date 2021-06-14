@@ -2,7 +2,7 @@
 
 class Perusahaan_model extends CI_Model
 {
-    private $_table = "perusahaan";
+    private $_table = "jenis_perusahaan";
 
     public $id_jenis_perusahaan;
     public $nama_jenis_perusahaan;
