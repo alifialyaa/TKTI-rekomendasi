@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TKTI - PO1</title>
+  <title>TKTI</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -47,9 +47,9 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="active"><a href="<?php echo site_url('welcome/index') ?>">Home</a></li>
+          <li><a href="<?php echo site_url('welcome/index#about') ?>">About</a></li>
+          <li><a href="<?php echo site_url('welcome/index#team') ?>">Team</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -62,141 +62,163 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="<?php echo site_url('welcome/index') ?>">Home</a></li>
+          <li><a href="<?php echo site_url('form/index') ?>">Kebutuhan Perusahaan</a></li>
+          <li><a href="<?php echo site_url('process/kebutuhan') ?>">IT Process</a></li>
+          <li><a href="<?php echo site_url('kuesioner/index') ?>">Kuesioner</a></li>
         </ol>
-        <h2>PO1: Define a Strategic IT Plan </h2>
+        <h2>Pengisian Kuesioner IT Process</h2>
       </div>
     </section><!-- End Breadcrumbs -->
 
     <section class="kuis">
       <div class="container">
+      <form action="<?= site_url('rekomendasi/index') ?>" role="form" method="POST" id="formKuesioner">
           <h4>Level 0</h4>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><p>Perencanaan strategis IT tidak dijalankan.</p>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
-              </div></li>
-            <li class="list-group-item"><p>Manajemen di perusahaan tidak memiliki kesadaran bahwa perencanaan strategis IT diperlukan untuk mendukung tujuan bisnis.</p>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
-              </div></li>
-          </ul>
+          <?php foreach ($kuesioner_level0 as $kuesioner): ?>
+            <?php if (!($kuesioner->level == 0)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio5" id="inlineRadio5" value="0">
+                    <label class="form-check-label" for="inlineRadio5">Tidak setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio6" id="inlineRadio6" value="0.33">
+                    <label class="form-check-label" for="inlineRadio6">Kurang setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio7" id="inlineRadio7" value="0.67">
+                    <label class="form-check-label" for="inlineRadio7">Setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radio8" id="inlineRadio8" value="1">
+                    <label class="form-check-label" for="inlineRadio8">Sangat setuju</label>
+                  </div></li>
+              </ul>
+          <?php endforeach; ?>
 
           <h4>Level 1</h4>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><p>Manajemen IT pada PIKTI mengetahui bahwa perencanaan strategis pada IT dibutuhkan di organisasi.</p>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
-              </div></li>
-            <li class="list-group-item"><p>Perencanaan IT dilakukan untuk memenuhi tujuan bisnis tertentu.</p>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Setuju</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
-              </div></li>
-              <li class="list-group-item"><p>Perencanaan strategis IT pada PIKTI terkadang dibahas pada pertemuan manajemen IT.</p>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Setuju</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
-                </div></li>
-                <li class="list-group-item"><p>Penyelarasan kebutuhan bisnis PIKTI dan teknologi merupakan reaksi dari kejadian tertentu.</p>
+          <?php foreach ($kuesioner_level1 as $kuesioner): ?>
+            <?php if (!($kuesioner->level == 1)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
+                    <input class="form-check-input" type="radio" name="inlineRadio9" id="inlineRadio9" value="0">
+                    <label class="form-check-label" for="inlineRadio9">Tidak setuju</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
+                    <input class="form-check-input" type="radio" name="inlineRadio10" id="inlineRadio10" value="0.33">
+                    <label class="form-check-label" for="inlineRadio10">Kurang setuju</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Setuju</label>
+                    <input class="form-check-input" type="radio" name="inlineRadio11" id="inlineRadio11" value="0.67">
+                    <label class="form-check-label" for="inlineRadio11">Setuju</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
+                    <input class="form-check-input" type="radio" name="inlineRadio12" id="inlineRadio12" value="1">
+                    <label class="form-check-label" for="inlineRadio12">Sangat setuju</label>
                   </div></li>
-                  <li class="list-group-item"><p>Resiko-resiko pada strategi hanya diidentifikasi secara informal dari proyek ke proyek.</p>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <label class="form-check-label" for="inlineRadio1">Tidak setuju</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                      <label class="form-check-label" for="inlineRadio2">Kurang setuju</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <label class="form-check-label" for="inlineRadio1">Setuju</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                      <label class="form-check-label" for="inlineRadio2">Sangat setuju</label>
-                    </div></li>
-          </ul>
-          <a href="rekomendasi.php" class="btn-learn-more">Kirim</a>
+              </ul>
+          <?php endforeach; ?>
+
+          <h4>Level 2</h4>
+          <?php foreach ($kuesioner_level2 as $kuesioner): ?>
+            <?php if (!($kuesioner->level == 2)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio13" id="inlineRadio13" value="0">
+                    <label class="form-check-label" for="inlineRadio13">Tidak setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio14" id="inlineRadio14" value="0.33">
+                    <label class="form-check-label" for="inlineRadio14">Kurang setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio15" id="inlineRadio15" value="0.67">
+                    <label class="form-check-label" for="inlineRadio15">Setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio16" id="inlineRadio16" value="1">
+                    <label class="form-check-label" for="inlineRadio16">Sangat setuju</label>
+                  </div></li>
+              </ul>
+          <?php endforeach; ?>
+
+          <h4>Level 3</h4>
+          <?php foreach ($kuesioner_level3 as $kuesioner): ?>
+            <?php if (!($kuesioner->level == 3)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio17" id="inlineRadio17" value="0">
+                    <label class="form-check-label" for="inlineRadio17">Tidak setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio18" id="inlineRadio18" value="0.33">
+                    <label class="form-check-label" for="inlineRadio18">Kurang setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio19" id="inlineRadio19" value="0.67">
+                    <label class="form-check-label" for="inlineRadio19">Setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio20" id="inlineRadio20" value="1">
+                    <label class="form-check-label" for="inlineRadio20">Sangat setuju</label>
+                  </div></li>
+              </ul>
+          <?php endforeach; ?>
+
+          <h4>Level 4</h4>
+          <?php foreach ($kuesioner_level4 as $kuesioner): ?>
+            <?php if (!($kuesioner->level == 4)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio21" id="inlineRadio21" value="0">
+                    <label class="form-check-label" for="inlineRadio21">Tidak setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio22" id="inlineRadio22" value="0.33">
+                    <label class="form-check-label" for="inlineRadio22">Kurang setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio23" id="inlineRadio23" value="0.67">
+                    <label class="form-check-label" for="inlineRadio23">Setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio24" id="inlineRadio24" value="1">
+                    <label class="form-check-label" for="inlineRadio24">Sangat setuju</label>
+                  </div></li>
+              </ul>
+          <?php endforeach; ?>
+
+          <h4>Level 5</h4>
+          <?php foreach ($kuesioner_level5 as $kuesioner): ?>
+            <?php if (!($kuesioner->level == 5)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio25" id="inlineRadio25" value="0">
+                    <label class="form-check-label" for="inlineRadio25">Tidak setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio26" id="inlineRadio26" value="0.33">
+                    <label class="form-check-label" for="inlineRadio26">Kurang setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio27" id="inlineRadio27" value="0.67">
+                    <label class="form-check-label" for="inlineRadio27">Setuju</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadio28" id="inlineRadio28" value="1">
+                    <label class="form-check-label" for="inlineRadio28">Sangat setuju</label>
+                  </div></li>
+              </ul>
+          <?php endforeach; ?>
+
+          <input class="btn btn-primary btn-sm float-right" type="submit" name="submit" value="Kirim" />
           </div>
       </div>
     </section>

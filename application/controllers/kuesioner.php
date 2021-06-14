@@ -18,8 +18,27 @@ class Kuesioner extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("kuesioner_model");
+        $this->load->library('form_validation');
+    }
+
 	public function index()
-	{
-		$this->load->view('kuesioner');
-	}
+    {
+        if (isset($_POST['submit'])) {
+            if(isset($_POST['radio4'])){
+				$id_it_process = $_POST['radio4'];
+				$data["kuesioner_level0"] = $this->kuesioner_model->getAll($id_it_process);
+				$data["kuesioner_level1"] = $this->kuesioner_model->getAll($id_it_process);
+				$data["kuesioner_level2"] = $this->kuesioner_model->getAll($id_it_process);
+				$data["kuesioner_level3"] = $this->kuesioner_model->getAll($id_it_process);
+				$data["kuesioner_level4"] = $this->kuesioner_model->getAll($id_it_process);
+				$data["kuesioner_level5"] = $this->kuesioner_model->getAll($id_it_process);
+				$this->load->view('kuesioner', $data);
+			}
+        }
+    }
 }
