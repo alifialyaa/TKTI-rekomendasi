@@ -81,7 +81,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3><?=$it_process?></h3>
             <p class="font-italic">
-              Berikut adalah hasil penghitungan maturity level pada proses TI <?=$it_process?>.
+              Berikut adalah hasil penghitungan maturity level pada proses TI: <?=$it_process?>.
             </p>
 
             <div class="skills-content">
@@ -103,15 +103,14 @@
 
       <div class="container" data-aos="fade-up">
         <h3> Rekomendasi</h3>
-        <p style="text-align:justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu ex quis lacus hendrerit rhoncus in vehicula orci. Vestibulum sodales, nulla et varius consectetur, lectus libero feugiat nulla, eu tempor mauris felis in arcu. Curabitur efficitur, turpis vel laoreet posuere, tortor purus auctor augue, nec posuere nunc lectus ac lectus. Vestibulum odio nunc, convallis quis velit vel, rutrum dictum quam. Vivamus id nulla eu dui posuere ornare. Pellentesque sagittis suscipit ex ac sodales. Donec tristique iaculis lectus, in bibendum neque dictum nec. Maecenas fermentum a dui a consequat. 
-        </p>
-        <p style="text-align:justify">
-          Sed interdum elementum orci, in volutpat justo tincidunt vitae. Vivamus laoreet leo sem, in pellentesque elit facilisis quis. Vivamus placerat mi et odio imperdiet iaculis. Pellentesque gravida ante nec ex consectetur, eget sollicitudin neque pulvinar. Maecenas sit amet rhoncus purus. Donec bibendum, mi id bibendum placerat, nisl dolor tempus lacus, nec aliquet leo neque ut magna. Donec ipsum nibh, feugiat sit amet eleifend dapibus, rhoncus id augue. Nam consequat viverra erat, eget sodales dolor pulvinar eget. 
-        </p>
-        <p style="text-align:justify">
-          Donec fermentum lacus vel tristique finibus. Ut blandit sit amet tortor at porta. Etiam feugiat ipsum arcu, eget commodo orci venenatis eu. Proin pharetra pretium hendrerit. Morbi rutrum volutpat lorem, sit amet vulputate ante tempus eget. Vestibulum tempus nulla risus, eu tincidunt erat lacinia ac. Nunc vitae facilisis libero. Nullam molestie porta cursus. Vestibulum venenatis tristique dapibus. Etiam et dapibus lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-        </p>
+        <?php foreach ($rekomendasi as $rekomendasi): ?>
+          <?php foreach ($list_kekurangan as $kekurangan): ?>
+            <?php if (!($rekomendasi->id_pertanyaan == $kekurangan)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p><?php echo $rekomendasi->rekomendasi ?></p></li>
+              </ul>
+          <?php endforeach; ?>    
+        <?php endforeach; ?>
       </div>
     </section><!-- End Hasil Section -->
   </main><!-- End #main -->

@@ -64,12 +64,18 @@ class Rekomendasi extends CI_Controller {
 			$kontribusi_level4 = 0;
 			$kontribusi_level5 = 0;
 			$jumlah_kontribusi = 0;
+			$kekurangan = array();
 
 			$nomor_pertanyaan = $this->kuesioner_model->getIdPertanyaan($id_it_process);
 			foreach ($nomor_pertanyaan as $value) 
 			{
 				if(isset($_POST['radio'.$value->id_pertanyaan])){
 					$nilai = $_POST['radio'.$value->id_pertanyaan];
+					if($nilai == 0)
+					{
+						array_push($kekurangan, $value->id_pertanyaan);
+					}
+
 					$it_process = $value->it_process;
 					// echo $nilai;
 					// echo "<br>";
@@ -118,12 +124,60 @@ class Rekomendasi extends CI_Controller {
 				}
 			}
 
-			$hasil_bagi_level0 = $jumlah_level0 / $jumlah_pertanyaan_level0;
-			$hasil_bagi_level1 = $jumlah_level1 / $jumlah_pertanyaan_level1;
-			$hasil_bagi_level2 = $jumlah_level2 / $jumlah_pertanyaan_level2;
-			$hasil_bagi_level3 = $jumlah_level3 / $jumlah_pertanyaan_level3;
-			$hasil_bagi_level4 = $jumlah_level4 / $jumlah_pertanyaan_level4;
-			$hasil_bagi_level5 = $jumlah_level5 / $jumlah_pertanyaan_level5;
+			if($jumlah_pertanyaan_level0 != 0)
+			{
+				$hasil_bagi_level0 = $jumlah_level0 / $jumlah_pertanyaan_level0;
+			}
+			else
+			{	
+				$hasil_bagi_level0 = 0;
+			}
+
+			if($jumlah_pertanyaan_level1 != 0)
+			{
+				$hasil_bagi_level1 = $jumlah_level1 / $jumlah_pertanyaan_level1;
+			}
+			else
+			{
+				$hasil_bagi_level1 = 0;
+			}
+
+			if($jumlah_pertanyaan_level2 != 0)
+			{
+				$hasil_bagi_level2 = $jumlah_level2 / $jumlah_pertanyaan_level2;
+			}
+			else
+			{
+				$hasil_bagi_level2 = 0;
+			}
+
+			if($jumlah_pertanyaan_level3 != 0)
+			{
+				$hasil_bagi_level3 = $jumlah_level3 / $jumlah_pertanyaan_level3;
+			}
+			else
+			{
+				$hasil_bagi_level3 = 0;
+			}
+
+			if($jumlah_pertanyaan_level4 != 0)
+			{
+				$hasil_bagi_level4 = $jumlah_level4 / $jumlah_pertanyaan_level4;
+			}
+			else
+			{
+				$hasil_bagi_level4 = 0;
+			}
+
+			if($jumlah_pertanyaan_level5 != 0)
+			{
+				$hasil_bagi_level5 = $jumlah_level5 / $jumlah_pertanyaan_level5;
+			}
+			else
+			{
+				$hasil_bagi_level5 = 0;
+			}		
+			
 			// echo "Hasil bagi level 0: " . $hasil_bagi_level0 . "<br>";
 			// echo "Hasil bagi level 1: " . $hasil_bagi_level1 . "<br>";
 			// echo "Hasil bagi level 2: " . $hasil_bagi_level2 . "<br>";
@@ -132,12 +186,26 @@ class Rekomendasi extends CI_Controller {
 			// echo "Hasil bagi level 5: " . $hasil_bagi_level5 . "<br>";
 			$jumlah_hasil_bagi = $hasil_bagi_level0 + $hasil_bagi_level1 + $hasil_bagi_level2 + $hasil_bagi_level3 + $hasil_bagi_level4 + $hasil_bagi_level5;
 			// echo "Jumlah hasil bagi: " . $jumlah_hasil_bagi . "<br>";
-			$normalisasi_level0 = $hasil_bagi_level0 / $jumlah_hasil_bagi;
-			$normalisasi_level1 = $hasil_bagi_level1 / $jumlah_hasil_bagi;
-			$normalisasi_level2 = $hasil_bagi_level2 / $jumlah_hasil_bagi;
-			$normalisasi_level3 = $hasil_bagi_level3 / $jumlah_hasil_bagi;
-			$normalisasi_level4 = $hasil_bagi_level4 / $jumlah_hasil_bagi;
-			$normalisasi_level5 = $hasil_bagi_level5 / $jumlah_hasil_bagi;
+
+			if($jumlah_hasil_bagi != 0)
+			{
+				$normalisasi_level0 = $hasil_bagi_level0 / $jumlah_hasil_bagi;
+				$normalisasi_level1 = $hasil_bagi_level1 / $jumlah_hasil_bagi;
+				$normalisasi_level2 = $hasil_bagi_level2 / $jumlah_hasil_bagi;
+				$normalisasi_level3 = $hasil_bagi_level3 / $jumlah_hasil_bagi;
+				$normalisasi_level4 = $hasil_bagi_level4 / $jumlah_hasil_bagi;
+				$normalisasi_level5 = $hasil_bagi_level5 / $jumlah_hasil_bagi;
+			}
+			else
+			{
+				$normalisasi_level0 = 0;
+				$normalisasi_level1 = 0;
+				$normalisasi_level2 = 0;
+				$normalisasi_level3 = 0;
+				$normalisasi_level4 = 0;
+				$normalisasi_level5 = 0;
+			}
+
 			$jumlah_normalisasi = $normalisasi_level0 + $normalisasi_level1 + $normalisasi_level2 + $normalisasi_level3 + $normalisasi_level4 + $normalisasi_level5;
 			// echo "Jumlah normalisasi: " . $jumlah_normalisasi . "<br>";
 			$kontribusi_level1 = $normalisasi_level1 / 1;
@@ -178,6 +246,7 @@ class Rekomendasi extends CI_Controller {
 			$data["nilai_maturity"] = $nilai_maturity_level;
 			$data["nilai_maturity_persen"] = $nilai_maturity_level / 5 * 100;
 			$data["level"] = $level;
+			$data["list_kekurangan"] = $kekurangan;
 			$data["rekomendasi"] = $this->rekomendasi_model->getAll();
 			$this->load->view('rekomendasi', $data);
         }
