@@ -46,30 +46,9 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="#contact">Contact</a></li>
-
+          <li class="active"><a href="<?php echo site_url('welcome/index') ?>">Home</a></li>
+          <li><a href="<?php echo site_url('welcome/index#about') ?>">About</a></li>
+          <li><a href="<?php echo site_url('welcome/index#team') ?>">Team</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -82,8 +61,11 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Rekomendasi</li>
+          <li><a href="<?php echo site_url('welcome/index') ?>">Home</a></li>
+          <li><a href="<?php echo site_url('form/index') ?>">Kebutuhan Perusahaan</a></li>
+          <li><a href="<?php echo site_url('process/kebutuhan') ?>">IT Process</a></li>
+          <li><a href="<?php echo site_url('kuesioner/index') ?>">Kuesioner</a></li>
+          <li><a href="<?php echo site_url('rekomendasi/index') ?>">Rekomendasi</a></li>
         </ol>
         <h2>Hasil dan Rekomendasi </h2>
       </div>
@@ -97,22 +79,22 @@
             <img src="<?php echo base_url(); ?>img/skills.png" class="img-fluid" alt="" width="500" height="400">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>PO1: Define a Strategic IT Plan</h3>
+            <h3><?=$it_process?></h3>
             <p class="font-italic">
-              Berikut adalah hasil penghitungan maturity level pada proses TI PO1.
+              Berikut adalah hasil penghitungan maturity level pada proses TI <?=$it_process?>.
             </p>
 
             <div class="skills-content">
 
               <div class="progress">
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" style="width: 53.6%" aria-valuenow="2,68" aria-valuemin="0" aria-valuemax="5"></div>
+                  <div class="progress-bar" role="progressbar" style="width: <?=$nilai_maturity_persen?>%" aria-valuenow="<?=$nilai_maturity?>" aria-valuemin="0" aria-valuemax="5"></div>
                   <div class="progress-bar-target" role="progressbar" style="width: 100%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"></div>
                 </div>
               </div>
 
               <p class="font-italic">
-                Nilai maturity level adalah 2.64 dan masuk pada level 3.
+                Nilai maturity level adalah <?=$nilai_maturity?> dan masuk pada level <?=$level?>.
               </p>
             </div>
           </div>

@@ -31,6 +31,7 @@ class Kuesioner extends CI_Controller {
         if (isset($_POST['submit'])) {
             if(isset($_POST['radio4'])){
 				$id_it_process = $_POST['radio4'];
+				$data["pertanyaan"] = $id_it_process;
 				$data["kuesioner_level0"] = $this->kuesioner_model->getAll($id_it_process);
 				$data["kuesioner_level1"] = $this->kuesioner_model->getAll($id_it_process);
 				$data["kuesioner_level2"] = $this->kuesioner_model->getAll($id_it_process);

@@ -12,9 +12,18 @@ class Kuesioner_model extends CI_Model
     public function getAll($id_it_process)
     {
         $this->db->select('id_pertanyaan, id_it_process, pertanyaan, level');
-        // $this->db->distinct();
         $this->db->from('pertanyaan');
         $this->db->where('id_it_process', $id_it_process);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function getIdPertanyaan($id_it_process)
+    {
+        $this->db->select('pertanyaan.id_pertanyaan, pertanyaan.id_it_process, pertanyaan.level, it_process.it_process');
+        $this->db->from('pertanyaan');
+        $this->db->join('it_process', 'it_process.id_it_process = pertanyaan.id_it_process');
+        $this->db->where('pertanyaan.id_it_process', $id_it_process);
         $query = $this->db->get();
         return $query->result();
     }
