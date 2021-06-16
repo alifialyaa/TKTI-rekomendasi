@@ -10,6 +10,17 @@ input data yang sudah (pertabel):
 - [x] it_process
 - [ ] pertanyaan (baru PO1)
 - [ ] rekomendasi
+---
+10.06.21
+- Database
+- [ ] pertanyaan (PO1-AI7)
+- [ ] rekomendasi (PO1-PO10)
+---
+14.06.21
+- [x] pemetaan dari jenis perusahaan ke IT Process (single choice IT resource)
+---
+15.06.21
+- [x] kuesioner
 
 Semangat gaes kita pasti bisa! <3
 
