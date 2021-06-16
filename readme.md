@@ -24,7 +24,7 @@ input data yang sudah (pertabel):
 ---
 15.06.21
 - [x] maturity level
-- [ ] rekomendasi
+- [x] rekomendasi
 
 Semangat gaes kita pasti bisa! <3
 
