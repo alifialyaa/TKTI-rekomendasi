@@ -21,6 +21,10 @@ input data yang sudah (pertabel):
 ---
 15.06.21
 - [x] kuesioner
+---
+15.06.21
+- [x] maturity level
+- [ ] rekomendasi
 
 Semangat gaes kita pasti bisa! <3
 
