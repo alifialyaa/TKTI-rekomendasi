@@ -103,6 +103,7 @@
 
       <div class="container" data-aos="fade-up">
         <h3> Rekomendasi</h3>
+        <h4> Rekomendasi [Belum dilaksanakan sama sekali] </h4>
         <?php foreach ($rekomendasi as $rekomendasi): ?>
           <?php foreach ($list_kekurangan as $kekurangan): ?>
             <?php if (!($rekomendasi->id_pertanyaan == $kekurangan)) continue; ?>
@@ -112,6 +113,33 @@
           <?php endforeach; ?>    
         <?php endforeach; ?>
       </div>
+
+      <div class="container" data-aos="fade-up">
+        <h3> Rekomendasi</h3>
+        <h4> Rekomendasi [Sudah dilaksanakan sebagian kecil] </h4>
+        <?php foreach ($rekomendasi_2 as $rekomendasi): ?>
+          <?php foreach ($list_kekurangan_2 as $kekurangan): ?>
+            <?php if (!($rekomendasi->id_pertanyaan == $kekurangan)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p>[Meningkatkan] <?php echo $rekomendasi->rekomendasi ?></p></li>
+              </ul>
+          <?php endforeach; ?>    
+        <?php endforeach; ?>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <h3> Rekomendasi</h3>
+        <h4> Rekomendasi [Sudah dilaksanakan sebagian besar] </h4>
+        <?php foreach ($rekomendasi_3 as $rekomendasi): ?>
+          <?php foreach ($list_kekurangan_3 as $kekurangan): ?>
+            <?php if (!($rekomendasi->id_pertanyaan == $kekurangan)) continue; ?>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><p>[Menyempurnakan] <?php echo $rekomendasi->rekomendasi ?></p></li>
+              </ul>
+          <?php endforeach; ?>    
+        <?php endforeach; ?>
+      </div>
+
     </section><!-- End Hasil Section -->
   </main><!-- End #main -->
 

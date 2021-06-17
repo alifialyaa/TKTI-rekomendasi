@@ -81,19 +81,19 @@
                 <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Tidak setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Belum dilaksanakan sama sekali</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.33">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Kurang setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian kecil</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.67">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian besar</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="1">
-                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sangat setuju</label>
+                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan</label>
                   </div></li>
               </ul>
           <?php endforeach; ?>
@@ -105,19 +105,19 @@
                 <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Tidak setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Belum dilaksanakan sama sekali</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.33">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Kurang setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian kecil</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.67">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian besar</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="1">
-                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sangat setuju</label>
+                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan</label>
                   </div></li>
               </ul>
           <?php endforeach; ?>
@@ -129,19 +129,19 @@
                 <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Tidak setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Belum dilaksanakan sama sekali</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.33">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Kurang setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian kecil</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.67">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian besar</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="1">
-                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sangat setuju</label>
+                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan</label>
                   </div></li>
               </ul>
           <?php endforeach; ?>
@@ -153,19 +153,19 @@
                 <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Tidak setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Belum dilaksanakan sama sekali</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.33">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Kurang setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian kecil</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.67">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian besar</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="1">
-                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sangat setuju</label>
+                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan</label>
                   </div></li>
               </ul>
           <?php endforeach; ?>
@@ -177,19 +177,19 @@
                 <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Tidak setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Belum dilaksanakan sama sekali</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.33">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Kurang setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian kecil</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.67">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian besar</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="1">
-                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sangat setuju</label>
+                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan</label>
                   </div></li>
               </ul>
           <?php endforeach; ?>
@@ -201,19 +201,19 @@
                 <li class="list-group-item"><p><?php echo $kuesioner->pertanyaan ?></p>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Tidak setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Belum dilaksanakan sama sekali</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.33">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Kurang setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian kecil</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="0.67">
-                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Setuju</label>
+                    <label class="form-check-label" for="inlineRadio<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan sebagian besar</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radio<?=$kuesioner->id_pertanyaan?>" id="inlineRadio<?=$kuesioner->id_pertanyaan?>" value="1">
-                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sangat setuju</label>
+                    <label class="form-check-label" for="inlineRadio5<?=$kuesioner->id_pertanyaan?>">Sudah dilaksanakan</label>
                   </div></li>
               </ul>
           <?php endforeach; ?>

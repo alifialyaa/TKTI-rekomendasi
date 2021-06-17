@@ -65,6 +65,8 @@ class Rekomendasi extends CI_Controller {
 			$kontribusi_level5 = 0;
 			$jumlah_kontribusi = 0;
 			$kekurangan = array();
+			$kekurangan_2 = array();
+			$kekurangan_3 = array();
 
 			$nomor_pertanyaan = $this->kuesioner_model->getIdPertanyaan($id_it_process);
 			foreach ($nomor_pertanyaan as $value) 
@@ -74,6 +76,14 @@ class Rekomendasi extends CI_Controller {
 					if($nilai == 0)
 					{
 						array_push($kekurangan, $value->id_pertanyaan);
+					}
+					if($nilai == 0.33)
+					{
+						array_push($kekurangan_2, $value->id_pertanyaan);
+					}
+					if($nilai == 0.67)
+					{
+						array_push($kekurangan_3, $value->id_pertanyaan);
 					}
 
 					$it_process = $value->it_process;
@@ -247,7 +257,11 @@ class Rekomendasi extends CI_Controller {
 			$data["nilai_maturity_persen"] = $nilai_maturity_level / 5 * 100;
 			$data["level"] = $level;
 			$data["list_kekurangan"] = $kekurangan;
+			$data["list_kekurangan_2"] = $kekurangan_2;
+			$data["list_kekurangan_3"] = $kekurangan_3;
 			$data["rekomendasi"] = $this->rekomendasi_model->getAll();
+			$data["rekomendasi_2"] = $this->rekomendasi_model->getAll();
+			$data["rekomendasi_3"] = $this->rekomendasi_model->getAll();
 			$this->load->view('rekomendasi', $data);
         }
     }
