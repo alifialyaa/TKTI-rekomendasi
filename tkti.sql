@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2021 at 12:28 PM
+-- Generation Time: Jun 17, 2021 at 04:41 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.25
 
@@ -115,26 +115,6 @@ INSERT INTO `it_resource` (`id_it_resource`, `it_resource`) VALUES
 (2, 'Information'),
 (3, 'Infrastructure'),
 (4, 'People');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jenis_perusahaan`
---
-
-CREATE TABLE `jenis_perusahaan` (
-  `id_jenis_perusahaan` int(11) NOT NULL,
-  `nama_jenis_perusahaan` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `jenis_perusahaan`
---
-
-INSERT INTO `jenis_perusahaan` (`id_jenis_perusahaan`, `nama_jenis_perusahaan`) VALUES
-(1, 'Startup'),
-(2, 'Intermediate'),
-(3, 'Establish');
 
 -- --------------------------------------------------------
 
@@ -871,6 +851,26 @@ INSERT INTO `pertanyaan` (`id_pertanyaan`, `id_it_process`, `pertanyaan`, `level
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `perusahaan`
+--
+
+CREATE TABLE `perusahaan` (
+  `id_jenis_perusahaan` int(11) NOT NULL,
+  `nama_jenis_perusahaan` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `perusahaan`
+--
+
+INSERT INTO `perusahaan` (`id_jenis_perusahaan`, `nama_jenis_perusahaan`) VALUES
+(1, 'Startup'),
+(2, 'Intermediate'),
+(3, 'Establish');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rekomendasi`
 --
 
@@ -978,7 +978,443 @@ INSERT INTO `rekomendasi` (`id_rekomendasi`, `id_pertanyaan`, `rekomendasi`) VAL
 (91, 91, 'Libatkan manajemen senior dalam peninjauan dampak dari bisnis potensial dan dampak dari perubahan teknologi.'),
 (92, 92, 'Lakukan persetujuan atas perubahan teknologi dengan melibatkan eksekutif secara formal.'),
 (93, 93, 'Lakukan perencanaan infrastruktur teknologi dengan mempertimbangkan kebutuhan bisnis dan perubahan lingkungan perusahaan.'),
-(94, 94, 'Lakukan peningkatan rencana infrastruktur secara berkelanjutan.');
+(94, 94, 'Lakukan peningkatan rencana infrastruktur secara berkelanjutan.'),
+(95, 95, 'Lakukan studi banding atau benchmarking sebagai acuan dalam arah teknologi perusahaan selanjutnya.'),
+(96, 96, 'Fokuskan departemen IT pada perusahaan pada pencapaian tujuan bisnis.'),
+(97, 97, 'Implementasikan fungsi IT secara konsisten.'),
+(98, 98, 'Libatkan TI secara langsung pada proyek perusahaan, meskipun hanya dilibatkan pada proses akhir bisnis.'),
+(99, 99, 'Lakukan analisis terhadap TI melalui perspektif departemen secara keseluruhan.'),
+(100, 100, 'Berikan pemahaman terhadap departemen TI dengan pemaaman kebutuhan yang implisit.'),
+(101, 101, 'Perbaiki TI agar dapat memenuhi kebutuhan pelanggan dan hubungan dengan kemampuan berpikir dan beradaptasi dengan cepat . Apabila memungkinkan, lakukan secara konsisten.'),
+(102, 102, 'Buatlah departemen IT secara terstruktur dan gunakan pengetahuan dan keterampilan individu sebagai dasar pengambilan keputusan.'),
+(103, 103, 'Buatlah kebijakan umum yang mengatur hubungan departemen IT dengan vendor.'),
+(104, 104, 'Definisikan secara jelas peran dan tanggung jawab antara departemen TI dan pihak ke-tiga.'),
+(105, 105, 'Lakukan dokumentasi, pengembangan, komunikasi, pada departemen IT dan selaraskan dengan strategi IT perusahaan yang telah ditentukan.'),
+(106, 106, 'Definisikan lingkungan untuk pengendalian internal.'),
+(107, 107, 'Pelihara hubungan perusahaan dengan pihak lain seperti komite penasihat, audit internal, dll.'),
+(108, 108, 'Departemen IT harus berfungsi secara keseluruhan.'),
+(109, 109, 'Bedakan tugas staff IT dengan pengguna pada umumnya.'),
+(110, 110, 'Sesuaikan kriteria persyaratan untuk perekrutan dari staff IT perusahaan dengan standar yang telah ditentukan.'),
+(111, 111, 'Buatlah aturan resmi yang mengatur tentang hubungan dengan pengguna dan pihak ketiga.'),
+(112, 112, 'Definisikan peran dan tanggung jawab setiap stakeholder pada perusahaan dengan baik dan dapat terealisasi sesuai kebutuhan.'),
+(113, 113, 'Tanggapi perubahan secara proaktif dalam upaya kebutuhan bisnis.'),
+(114, 114, 'Seimbankan definisi manajemen IT, kepemilikan proses, akuntabilitas, dan tanggung jawab.'),
+(115, 115, 'Terapkan praktek-praktek internal yang baik kedalam departemen IT.'),
+(116, 116, 'Lakukan pelatihan kepada manajemen IT untuk mendapatkan keahlian dan keterampilan yang dibutuhkan untuk mendefinisikan, menerapkan, dan memantau hubungan dalam departemen.'),
+(117, 117, 'Gunakan metrik yang terukur untuk mendukung tujuan bisnis serta gunakan faktor-faktor keberhasilan sebagai standar keberhasilan.'),
+(118, 118, 'Berikan pelatihan kepada staff sehingga memenuhi skill yang dibutuhkan untuk mendukung jalannya proyek dan pengembangan profesional.'),
+(119, 119, 'Seimbangkan antara keterampilan skill dengan sumber daya internal yang dibutuhkan oleh organisasi luar.'),
+(120, 120, 'Buat struktur departemen IT pada perusahaan yang dapat mencerminkan kebtuhan bisnis dengan memberikan layanan yang sesuai dengan bisnis strategis.'),
+(121, 121, 'Buat struktur departemen IT secara fleksibel dan adaptif.'),
+(122, 122, 'Terapkan praktik dari organisasi/industri yang sejenis dengan memperhitungkan kebutuhan dan tujuan perusahaan.'),
+(123, 123, 'Gunakan teknologi untuk membantu pemantauan kinerja dan proses pada departemen IT.'),
+(124, 124, 'Manfaatkan teknologi yang dimiliki oleh perusahaan untuk melakukan komunikasi dan monitoring.'),
+(125, 125, 'Lakukan proses perbaikan secara berkelanjutan pada departemen-departemen.'),
+(126, 126, 'Pemilihan investasi pada bidang IT dan perencanaan penganggaran pada TI adalah suatu hal yang penting untuk dapat mengontrol pengeluaran untuk IT'),
+(127, 127, 'Lakukan pengawasan atau pemantauan pada investasi dan pengeluaran TI'),
+(128, 128, 'Lakukan pengelolaan investasi IT dan komunikasikan kebutuhahan dari pengelolaan tersebut dikomunikasikan secara konsisten.'),
+(129, 129, 'Tunjuk penanggun jawab dalam pemilihian inverstasi IT dan lakukan rencana penganggaran untuk IT.'),
+(130, 130, 'Lakukan pemilihan investasi IT dan penganggaran IT dengan dokumen yang sah.'),
+(131, 131, 'Lakukan investasi IT secara terencana.'),
+(132, 132, 'Lakukan secara bertahap untuk memulai melakukan perencanaan dalam berinvestasi untuk IT atau operasional yang berfokus pada keputusan anggaran.'),
+(133, 133, 'Lakukan koordinasi pengertian akan kebutuhan pemilihan investasi IT dan penganggaran IT.'),
+(134, 134, 'Lakukan komunikasi secara berkala dan terkoordinir mengenai kebutuhan dalam pemilihan dan pengangaran investasi IT.'),
+(135, 135, 'Adakan pemenuhan kebutuhan dalam pemilihan IT dan penganggaran IT pada perusahaan meskipun masih tergantung pada inisiatif individu'),
+(136, 136, 'Buatlah teknik atau standar umum untuk pengembangan komponen penganggaran IT perusahaan.'),
+(137, 137, 'Lakukan persetujuan anggaran IT meskipun secara reaktif dan taktis.'),
+(138, 138, 'Buatlah kebijakan dan proses investasi. Dokumentasikan, definisikan, dan komunikasikan penganggaran investasi IT dan mencangkup isu utama teknologi bisnis.'),
+(139, 139, 'Selaraskan anggaran IT yang dimiliki oleh perusahaan dengan rencana strategis IT dan rencana bisnis perusahaan.'),
+(140, 140, 'Buatlah prosedur dan pengaturan untuk pemilihan dan penganggaran investasi IT. Dokumentasikan dan komunikasikan pemilihan dan penganggaran investasi TI pada perusahaan.'),
+(141, 141, 'Adakan pelatihan secara formal, meskipun hanya berdasarkan inisiatif individu'),
+(142, 142, 'Buat persetujuan secara formal untuk pemilihan investasi IT dan penganggaran IT.'),
+(143, 143, 'Rencanakan dan lakukan pelatihan terhadap staff TI untuk mengembangkan proses penganggaran IT sehingga mampu memberikan rekomendasi investasi yang tepat untuk perusahaan.'),
+(144, 144, 'Berikan penugasan dan tanggung jawab terhadap penganggaran investasi IT kepada individu secara khusus.'),
+(145, 145, 'Lakukan identifikasi dan penyelesaian apabila terdapat duplikasi anggaran'),
+(146, 146, 'Lakukan analisa biaya TI secara formal.'),
+(147, 147, 'Lakukan penganggaran IT secara proaktif dan sesuai standar perusahaan.'),
+(148, 148, 'Masukan dampak dari pergeseran biaya dalam pengembanan dan operasional dari perangkat lunak dan keras utnuk proses integrasi sistem dan SDM.'),
+(149, 149, 'Lakukan perhitungan berupa manfaat dan keuntungan secara finansial dan non-finansial dalam investasi IT .'),
+(150, 150, 'Implementasikan pelayanan perusahaan yang baik untuk menghitung biaya dan mengidentifikasi pendekatan untuk meningkatkan efektivitas investasi IT.'),
+(151, 151, 'Lakukan analisis pengembangan teknologi dalam mempertimbangkan pemilihan investasi dan penganggaran IT'),
+(152, 152, 'Lakukan peningkatan proses manajemen investasi IT berdasarkan pengalaman dan analisa kinerja inverstasi IT yang dilakukan sebelumnya.'),
+(153, 153, 'Lakukan keputusan investasi berdasarkan peningkatan kinerja perusahaan'),
+(154, 154, 'Lakukan evaluasi dan penilaian secara formal untuk pendanaan alternatif dalam investasi IT sesuai dengan prosedur perusahaan.'),
+(155, 155, 'Lakukan analisis dalam mengidentifikasi perbedaan dalam perusahaan.'),
+(156, 156, 'Pertimbangkan hasil analisa biaya dan manfaat yang telah dilakukan untuk memutuskan investasi perusahaan.'),
+(157, 157, 'Buatlah lingkungan kontrol IT yang positif'),
+(158, 158, 'Lakukan penyediaan informasi secara akurat dan tepat waktu mengenai layanan IT saat ini dan masa depan serta mencantumkan risiko dan tanggung jawab terkait.'),
+(159, 159, 'Kebijakan, prosedur, pedoman, dan dokumentasi IT yang akurat, dapat dipahami dan disetujui kepada pemangku kepentingan adalah hal yang perusahaan harus miliki. Hal-hal tersebut harus tertanam dalam kerangka kerja pengendalian TI'),
+(160, 160, 'Lakukan penanganan persyaratan lingkungan pengendalian informasi perusahaan secara reaktif.'),
+(161, 161, 'Lakukan pengembangan dan komunikasi kebijakan, prosedur, dan standar secara ad hoc sesuai dengan isu dalam institusi.'),
+(162, 162, 'Lakukan pengembangan, komunikasi, dan kepatuhan pengguna IT meskipun secara informal dan tidak konsisten.'),
+(163, 163, 'Tentukan elemen lingkungan kontrol IT yang selaras dengan filosofi manajemen dan operasi perusahaan.'),
+(164, 164, 'Jadikan pengelolaan risiko yang signifikan, mendorong risiko yang signifikan, mendorong kerjasama lintas divisi dan kerja tim, mendorong kepatuan dan perbaikan proses berkelanjutan, serta penanganan penyimpangan proses dengan baik sebagai dasar pengendalia'),
+(165, 165, 'Pahami kebutuhan dan persyaratan lingkungan pengendalian informasi secara efektif dan implisit, meskipun praktiknya sebagian besar bersifat informal.'),
+(166, 166, 'Komunikasikan kebutuhan akan kebijakan pengendalian, rencana, dan prosedur oleh manajemen perusahaan. Serahkan pengembangannya kepadan kebijakan manajer individu dan area bisnis perusahaan.'),
+(167, 167, 'Jadikan kualitas IT sebagai filosfi yang diinginkan perusahaan, meskipun praktik diserahkan kepada manajer individu.'),
+(168, 168, 'Lakukan pelatihan IT meskipun dilakukan secara individual dan sesuai kebutuhan masing-masing individual.'),
+(169, 169, 'Kembangkan dan pelihara kerangka kerja yang dapat mendefinisikan pendekatan keseluruhan perusahaan terhadap risiko dan kendali TI. Kerangka kerja tersebut harus selaras denan kebijakan TI dan lingkungan kendali dan kerangka kerja risiko dan kendali perusah'),
+(170, 170, 'Kembangkan kontrol informasi lengkap dan lingkungan manajemen kualitas. Dokumentasikan dan komunikasikan oleh manajemen perusahaan serta mencakup kerangka kerja untuk kebijakan, rencana dan prosedur.'),
+(171, 171, 'Buatlah proses pengembangan kebijakan yang terstruktur, terpelihara dan diketahui oleh staf, dan kebijakan, rencana, dan prosedur yang ada cukup baik dan mencakup masalah-masalah utama dalam PIKTI'),
+(172, 172, 'Buatlah program kesadaran dan pembahasan pentingnya keamanan IT'),
+(173, 173, 'Adakan pelatihan formal untuk mendukung lingkungan pengendalian informasi, meskipun diterapkan tidak bergitu ketat.'),
+(174, 174, 'Buatlah kerangka kerja pengembangan untuk kebijakan dan prosedur pengendalian, meskipun pemantauan terhadap kepatuhan tidak konsisten.'),
+(175, 175, 'Lakukan standarisasi dan dan lakukan teknik untuk memberikan kesadaran keamanan secara formal dan merata.'),
+(176, 176, 'Kembangkan dan pelihara kebijakan untuk pendukung strategi IT.'),
+(177, 177, 'Berikan tanggung jawab kepada manajemen dalam komunikasi kebijakan pengendalian internal dan delegasi untuk tanggung jawab dan alokasi sumber daya yang cukup dalam pemeliharaan lingkungan sejalan dengan perubahan signifikan.'),
+(178, 178, 'Ciptakan lingkungan pengendalian informasi yang positif dan proaktif.'),
+(179, 179, 'Kembangkan, pelihara, dan komunikasikan kebijakan, rencana, dan prosedur secara lengkap yang merupakan gabungan dari praktik internal yang baik.'),
+(180, 180, 'Tetapkan kerangka kerja untuk peluncuran dan pemeriksaan kepatuhan IT.'),
+(181, 181, 'Luncurkan dan tegakan kebijakan IT untuk semua staf yang relevan.'),
+(182, 182, 'Selaraskan pengendalian informasi perusahaan dengan kerangka kerja serta visi manajemen strategis. Lakukan peninjauan secara berkala dan lakukan pembaruan dan penigkatan.'),
+(183, 183, 'Tugaskan tenaga ahli internal dan eksternal perusahaan untuk memastikan bahwa praktik industri yang baik diadopsi sehubungan dengan panduan pengendalian dan teknk komunikasi.'),
+(184, 184, 'Lakukan pemantauan, penilaian mandiri, dan pemeriksaan kepatuhan disebar secara luas di dalam organisasi perusahaan'),
+(185, 185, 'Gunakan teknologidalam perusahaan untuk memelihara kebijakan dan basis pengetahuan kesadaran dan untuk mengoptimalkan komunikasi, menggunakan otomatisasi kantor dan alat pelatihan berbasis komputer'),
+(186, 186, 'Komunikasikan kesadaran dan pemahaman tentang tujuan dan arahan bisnis dan TI kepada pemangku kepentingan dan pengguna yang sesuai di seluruh perusahaan'),
+(187, 187, 'Berikan kesadaran tentang pentingnya keselarasan manajemen SDM TI dengan proses perencanaan teknologi untuk organisasi.'),
+(188, 188, 'Berikan pertanggung jawaban pada bagian human resource mengenai TI.'),
+(189, 189, 'Perlu diketahui bahwa IT dibutuhkan pada bagian human resource.'),
+(190, 190, 'Lakukann manajemen SDM meskipun dilakukan secara infromal dan reaktif.'),
+(191, 191, 'Lakukan proses manajemen SDM IT dengan berfokus kepada perekrutan dan pengelolaan personel/staff'),
+(192, 192, 'Perlu diketahui bahwa dengan adanya perkembangan teknologi, perusahaan harus memiliki kemampuan dan kompetensi yang dapat beradaptasi dengan perkembangan teknologi.'),
+(193, 193, 'Apabila dibutuhkan, perusahaan dapat memperkerjakan dan mengelola personel IT.'),
+(194, 194, 'Lakukan pelatihan untuk staf baru.'),
+(195, 195, 'Perlu ada kesadaran bahwa manajemen SDM IT diperlukan oleh manajemen.'),
+(196, 196, 'Lakukan perencanaan dalam melakukan manajemen SDM IT.'),
+(197, 197, 'Lakukan pendekatan strategis dalam memperkerjakan dan mengelola personel IT.'),
+(198, 198, 'Buatlah rencana pelatihan secara formal untuk memenuhi kebutuhan SDM.'),
+(199, 199, 'Lakukan program rotasi dalam rangka memperluas keterampilan manajemen teknis dan bisnis.'),
+(200, 200, 'Berikan tanggung jawab pengembangan dan pemeliharaan rencana manajemen SDM IT kepada individu/kelompok tertentu yang memiliki keahlian dan keterampilan yang diperlukan dalam pengembangan rencana.'),
+(201, 201, 'Pengembangan dan pengelolaan rencana manajemen SDM IT harus responsif teradap perubahan.'),
+(202, 202, 'Lakukan standarisasi dalam organisasi sehingga memungkinkan mengidentifikasi penyimpangan dari rencana manajemen SDM IT, khususnya pada pengelolaan pertumbunhan dan pergantian personel IT.'),
+(203, 203, 'Buat dan bandingkan peninjauan dan kompensasi kinerja organisasi IT lainnya.'),
+(204, 204, 'Selalu pertimbangkan pengembangan jalur karir pada manajemen SDM IT sehingga bersifat proaktif.'),
+(205, 205, 'Selalu perbarui rencana manajemen SDM sesuai dengan kebutuhan perusahaan.'),
+(206, 206, 'Integrasikan perencanaan manajemen SDM dengan teknologi TI.'),
+(207, 207, 'Selaraskan manajemen SDM dengan arah strategis perusahaan/organisasi.'),
+(208, 208, 'Konsistenkan manajemen SDM IT melalui prakik industri yang baik.'),
+(209, 209, 'Lakukan pengembangan untuk program pelatihan berdasarkan standar dan produk teknologi baru sebelum diterapkan pada organisasi perusahaan.'),
+(210, 210, 'Buatlah perencanaan Quality Management System (QMS) dan metodologi System Development Life Cycle (SDLC)'),
+(211, 211, 'Perlu diketahui oleh manajemen perusahaan bahwa kualitas dari layanan perusahaan sangat penting.'),
+(212, 212, 'Lakukan peninjauan terkait kualitas operasi dan layanan di perusahaan'),
+(213, 213, 'Buatlah penilaian terkait layanan di perusahaan secara informal untuk mengukur kualitas'),
+(214, 214, 'Fokuskan Quality Management System (QMS) pada perusahaan pada IT-project dan process oriented'),
+(215, 215, 'Adakan program atau aplikasi yang digunakan untuk memonitor aktivitas Quality Management System (QMS) pada manajemen perusahaan'),
+(216, 216, 'Komunikasikan Quality Management System (QMS) kepada perusahaan oleh manajemen dengan mengikutsertakan manajemen IT dan manajemen end-user'),
+(217, 217, 'Lakukan kegiatan edukasi dan pelatihan untuk staf dan karyawan perusahaan mengenai kualitas layanan yang diberikan.'),
+(218, 218, 'Buatlah standar yang digunakan sebagai kualitas dasar untuk digunakan di berbagai proyek organisasi IT.'),
+(219, 219, 'Lakukan perencanaan dan pelaksanaan survey terkait kepuasan kualitas layanan di perusahaan'),
+(220, 220, 'Buatlah rancangan untuk pembelian peralatan pelatihan dan penunjang sistemmanajemen kualitas.'),
+(221, 221, 'Rencanakan untuk melakukan survei kepuasan terhadap kualitas layanan perusahaan.'),
+(222, 222, 'Buatlah suatu standar pada kualitas layanan perusahaan.'),
+(223, 223, 'Lakukan surve kualitas kepuasan secara konsisten.'),
+(224, 224, 'Lakukan benchmarking dengan kompetitor perusahaan.'),
+(225, 225, 'Jadikan manajemen IT sebagai dasar pengetahuan dari metriks kualitas.'),
+(226, 226, 'Aplikasikan analisis akar permasalahan (root cause analysis) secara berkala.'),
+(227, 227, 'Terapkan sistem manajemen kualitas (QMS) pada setiap aktivitas dan proses bisnis dalam perusahaan.'),
+(228, 228, 'Jadikan sistem manajemen kualitas (QMS) yang diterapkan fleksibel dan mudah beradaptasi dengan perubahan lingkungan di perusahaan'),
+(229, 229, 'Adakan secara rutin proses brenchmarking dengan program pendidikan diluar (kompetitor perusahaan)'),
+(230, 230, 'Tingkatkan proses manajemen mutu perusahaan hingga sesuai standar dan spesifikasi'),
+(231, 231, 'Tetapkan proses pengadaan sumber daya IT'),
+(232, 232, 'Prosedur dan kebijakan pengadaan haruslah jelas, sehingga sumber daya IT dapat tersedia tepat waktu dan perusahan dapat menghemat biaya.'),
+(233, 233, 'Identifikasi risiko sehingga memperoleh solusi IT dan dapat memberikan layanan IT pada perusahaan'),
+(234, 234, 'Pertimbangkan risiko TI perusahaan secara ad hoc'),
+(235, 235, 'Lakukan penilaian informal dari risiko proyek sesuai dengan ketentuan proyek tersebut.'),
+(236, 236, 'Lakukan penilaian dan identifikasi risiko dalam rencana proyek dan jadikan manajer perusahaan sebagai penanggung jawab.'),
+(237, 237, 'Pertimbangakn risiko dari IT yang lebih spesifik seperti keamaanan, integritas, dan ketersediaan sesuai per proyek.'),
+(238, 238, 'Lakukan pembagasan menenai risiko terkait IT yang mempengaruhi operasi tiap harinya pada rapat manajemen perusahaan.'),
+(239, 239, 'Mitigasi harus tetap konsisten merkipun risiko telah dipertimbangkan'),
+(240, 240, 'Perlu adanya pemahaman bahwa risko IT perlu dipertimbangkan.'),
+(241, 241, 'Lakukan pendekatan penilaian risiko yang berkembang dan diterapkan atas arahan manajer perusahaan'),
+(242, 242, 'Tetapkan manajemen risiko pada level tinggi. Mulai terapkan manajemen risiko meskipun hanya untuk proyek besar ataupun sebagai respon dari suatu masalah.'),
+(243, 243, 'Lakukan identifikasi risiko terlebih dahulu sebelum melakukan proses mitigasi risiko.'),
+(244, 244, 'Tentukan dan buatlah kebijakan manajemen risiko perusahaan untuk menentukan bagaimana dan melakukan penilaian terhadap suatu risiko'),
+(245, 245, 'Manajemen risiko harus mengikuti proses yang telah ditentukan dan didokumentasikan.'),
+(246, 246, 'Pelatihan manajemen risiko harus tersedia untuk semua staff perusahaan.'),
+(247, 247, 'Keputusan untuk mengikuti manajemen risiko dan menerima pelatihan diserahkan kepada kebijaksanaan individu staf.'),
+(248, 248, 'Yakinkan dan pastikan bahwa risiko utama bisnis teridentifikasi melalui metodologi yang digunakan perusahaan untuk penilaian risiko.'),
+(249, 249, 'Lakukan proses mitigasi risiko setelah mengidentifikasi risiko.'),
+(250, 250, 'Buatlah uraian tugas untuk mempertimbangkan tanggung jawab manajemen risiko'),
+(251, 251, 'Terapkan prosedur standar yang mana merupakan penilaian dan pengelolaan dari sebuah risiko'),
+(252, 252, 'laporkan pengecualian untuk proses manajemen risiko ke manajemen TI perusahaan.'),
+(253, 253, 'Manajemen senior perusahaan bertanggung jawab terhadap manajemen risiko IT'),
+(254, 254, 'Nilai dan mitigasi risiko pada tingkat proyek individu dan dilakukan secara teratur berkaitan dengan operasi TI secara keseluruhan'),
+(255, 255, 'Beri tahu manajemen perusahaan tentang perubahan dalam bisnis dan lingkungan TI yang dapat secara signifikan memengaruhi skenario risiko terkait TI perusahaan'),
+(256, 256, 'Manajemen perusahaan harus mampu memantau posisi risiko dan membuat keputusan yang terinformasi mengenai eksposur yang bersedia diterimanya'),
+(257, 257, 'Risiko yang teridentifikasi harus memiliki pemilik yang ditunjuk, manajemen senior, dan manajemen TI yang mana menentukan tingkat risiko yang akan ditoleransi oleh organisasi perusahaan.'),
+(258, 258, 'Kembangkan ukuran standar untuk menilai risiko dan menentukan rasio risiko / pengembalian.'),
+(259, 259, 'Perusahaan harus memiliki anggaran manajemen untuk proyek manajemen risiko operasional yang mana bertujuan untuk menilai kembali risiko secara teratur'),
+(260, 260, 'Lakukan pembuatan database manajemen risiko, dan mulai mengotomatiskan bagian dari proses manajemen risiko'),
+(261, 261, 'Manajemen IT perusahaan harus mempertimbangkan strategi mitigasi risiko (langkah-langkah menghindari adanya risiko)'),
+(262, 262, 'Kembangkan manajemen risiko ke tahap di mana proses organisasi yang terstruktur ditegakkan dan dikelola dengan baik'),
+(263, 263, 'Terapkan praktik yang baik di seluruh operasi perusahaan'),
+(264, 264, 'Lakukan penangkapan, analisis, dan pelaporan data manajemen risiko dengan sangat otomatis'),
+(265, 265, 'Pelaksanaan bimbingan dilakukan dengan pemberian bimbingan dari pemimpin perusahaan di lapangan, dan organisasi TI perusahaan mengambil bagian dalam kelompok sebaya untuk bertukar pengalaman.'),
+(266, 266, 'Manajemen risiko harus terintegrasi ke dalam semua bisnis dan operasi TI perusahaan dan diterima dengan baik dan melibatkan pengguna layanan TI perusahaan secara luas'),
+(267, 267, 'Manajemen perusahaan harus mendeteksi dan bertindak ketika keputusan operasional dan investasi TI utama dibuat dengan mempertimbangkan rencana manajemen risiko.'),
+(268, 268, 'Lakukan mitigasi risiko secara teratur untuk mengontrol dan mencegah risiko.'),
+(269, 269, 'Menerapkan teknik manajemen proyek pada perusahaan serta mempertimbangkan dampak binsis yang dapat terjadi terkait kesalahan manajemen proyek dan pengembangan kegagalan proyek'),
+(270, 270, 'Menggunakan teknik dan pendekatan manajemen proyek pada teknologi informasi dengan keputusan yang diambil secara bersama oleh departemen teknologi informasi'),
+(271, 271, 'Memiliki kepemilikan proyek dan manajemen proyek dengan komitmen manajemen yang baik'),
+(272, 272, 'Mempertimbangkan manajemen pengguna dan masukan dari pelanggan perusahaan dalam pengambilan keputusan terhadap manajemen proyek perusahaan'),
+(273, 273, 'Melakukan proses mendefinisikan proyek teknologi informasi dengan keterlibatan pengguna dan pelanggan perusahaan'),
+(274, 274, 'Membuat organisasi yang jelas dalam bidang teknologi informasi dalam manajemen protek perusahaan'),
+(275, 275, 'Membuat ketentuan yang jelas terkait manajemen proyek perusahaan khususnya mengenai peran dan tanggung jawab dalam manajemen proyek tersebut'),
+(276, 276, 'Membuat proyek, jadwal, dan pencapaian perusahaan dengan ketentuan serta pendefinisian yang baik'),
+(277, 277, 'Melakukan tracking terhadap waktu dan pengeluaran yang digunakan untuk pengerjaan proyek perusahaan serta dilakukan juga perbandingan terhadap anggaran perusahaan'),
+(278, 278, 'Mengkomunikasikan tentang kebutuhan dan pentingnya manajemen teknologi informasi pada proyek perusahaan'),
+(279, 279, 'Mengembangkan dan menggunakan teknik dan metode yang digunakan baik pada proyek kecil sampai dengan proyek besar pada perusahaan'),
+(280, 280, 'Membuat tujuan bisnis dan teknik pada proyek-proyek yang dikerjakan oleh perusahaan dengan proses pendefinisan yang formal'),
+(281, 281, 'Melibatkan stakeholder/pemangku kebutuhan ke dalam proses manajemen proyek yang terdapat pada perusahaan'),
+(282, 282, 'Mengembangkan pedoman awal yang digunakan pada aspek-aspek dalam manajemen proyek yang terdapat pada perusahaan'),
+(283, 283, 'Menerapkan pedoman yang telah ditentukan pada proses manajemen proyek yang terdapat pada perusahaan dengan tanggung jawab yang dipegang oleh masing-masing manajer proyek dalam penerapannya sehingga dibutuhkan koordinasi agar dapat berjalan secara baik dan '),
+(284, 284, 'Membuat dan mengkomunikasikan proses dan metodologi pada manajemen proyek teknologi informasi pada perusahaan'),
+(285, 285, 'Mempertimbangkan tujuan bisnis dan teknis yang baik dan sesuai dengan proyek teknologi informasi yang sedang dikerjakan oleh perusahaan'),
+(286, 286, 'Melibatkan senior manajemen bisnis dan teknologi informasi dalam proses manajemen proyek yang terdapat pada perusahaan'),
+(287, 287, 'Mendirikan bagian yang menangani manajemen proyek pada perusahaan dengan memanfaatkan teknologi informasi serta dengan peran dan tanggung jawab yang telah ditentukan oleh perusahaan'),
+(288, 288, 'Memantau proyek-proyek yang sedang dikerjakan oleh perusahaan dengan metrik pencapaian, jadwal, anggaran, dan pengukuran kinerja'),
+(289, 289, 'Mengadakan pelatihan tentang manajemen proyek dengan inisiatif/kesadaran penuh yang berasal dari para staf perusahaan'),
+(290, 290, 'Menerapkan secara luas aktivitas implementasi pasca-sistem serta prosedur QA/Quality Assurance (bertanggung jawab untuk memastikan sebuah produk yang akan dilepas ke pasaran sudah memenuhi semua standar kualitas untuk setiap komponennya) pada perusahaan'),
+(291, 291, 'Mengelola proyek yang terdapat pada perusahaan dengan baik serta menjadikannya sebagai portofolio untuk memastikan bisnis mengambil proyek yang tepat dan selaras dengan nilai, strategi, dan tujuan perusahaan'),
+(292, 292, 'Membuat metrik sebagai bentuk evaluasi terhadap proyek formal dan terstandarisasi yang sedang dikerjakan oleh perusahaan agar hasil evaluasi tersebut dapat ditinjau setelah proyek selesai dikerjakan'),
+(293, 293, 'Melakukan pengukuran dan evaluasi terhadap manajemen proyek yang terdapat pada keseluruhan bidang perusahaan (tidak hanya fokus ke dalam bidang teknologi informasi)'),
+(294, 294, 'Mengkomunikasikan tentang peningkatan yang terjadi pada proses manajemen proyek kepada seluruh anggota tim proyek perusahaan agar dapat terus meningkatkan hal tersebut'),
+(295, 295, 'Menerapkan struktur organisasi proyek dengan peran, tanggung jawab, dan kinerja staf yang terdokumentasi dengan baik oleh pihak manajemen perusahaan'),
+(296, 296, 'Menetapkan kriteria yang dijadikan sebagai faktor evaluasi dari setiap kesuksesan yang dapat dicapai oleh pengerjaan proyek perusahaan'),
+(297, 297, 'Mengelola nilai dan risiko dari adanya pengerjaan proyek pada perusahaan dengan dilakukan pada sebelum, selama, dan setelah penyelesaian suatu proyek'),
+(298, 298, 'Mempertimbangkan tujuan perusahaan ke setiap aspek pengambilan keputusan pada setiap bidang pada perusahaan, bukan hanya yang spesifik pada aspek teknologi informasi saja'),
+(299, 299, 'Mendukung secara penuh dan aktif dalam pengerjaan suatu proyek oleh pihak manajemen khususnya manajemen senior dan stakeholder/pemangku kepentingan lain di perusahaan'),
+(300, 300, 'Merencanakan pelatihan manajemen proyek bagi seluruh staf pada bagian manajemen proyek dan seluruh pihak pada departemen teknologi informasi pada perusahaan'),
+(301, 301, 'Menerapkan dan menegakkan metodologi proyek yang telah terbukti keberhasilannya pada perusahaan serta mengintegrasikannya ke dalam budaya yang terdapat pada keseluruhan bagian perusahaan'),
+(302, 302, 'Mengidentifikasi dan melembagakan praktik manajemen proyek terbaik dimana memang terbukti keberhasilannya pada perusahaan dengan inisiatif yang berkelanjutan untuk menerapkannya'),
+(303, 303, 'Menerapkan dan mendefinisikan strategi teknologi informasi yang digunakan dalam pengembangan sumber daya dan proyek operasional pada perusahaan'),
+(304, 304, 'Bertanggung jawab atas proyek dan program yang sedang dikerjakan oleh perusahaan dari tahap awal hingga pasca-implementasi, dimana pemegang tanggung jawab ini adalah kantor manajemen proyek yang terintegrasi dengan perusahaan'),
+(305, 305, 'Merencanakan proyek dan program yang akan dikerjakan oleh perusahaan guna memastikan pengguna dan sumber daya teknologi informasi digunakan sebaik-baiknya untuk mendukung strategi perusahaan'),
+(306, 306, 'Menggunakan identifikasi dari kebutuhan fungsional dan operasional untuk mengimplementasikan pemanfaatan TI'),
+(307, 307, 'Memiliki kesadaran untuk memanfaatkan TI yang dapat berpotensial untuk menjadi solusi teknologi yang selaras dengan bisnis yang sedang dijalankan oleh perusahaan'),
+(308, 308, 'Memiliki kesadaran untuk menentukan kebutuhan perusahaan dan kesadaran untuk mengidentifikasi solusi teknologi yang selaras dengan bisnis perusahaan'),
+(309, 309, 'Mengadakan pertemuan yang dihadiri oleh beberapa pihak manajemen perusahaan guna membahas kebutuhan perusahaan, serta kebutuhan yang terkadang didokumentasikan'),
+(310, 310, 'Solusi teknologi yang telah dihasilkan oleh perusahaan sebaiknya diidentifikasi berdasarkan akan kesadaran pasar yang terbatas atau sebagai tanggapan akan adanya penawaran vendor kepada perusahaan'),
+(311, 311, 'Melakukan riset yang terstruktur mengenai teknologi yang sedang tersedia saat ini dengan mempertimbangkan kebutuhan perusahaan'),
+(312, 312, 'Melakukan pendekatan secara intuitif guna mengidentifikasi ketersediaan solusi teknologi yang terdapat pada perusahaan'),
+(313, 313, 'Solusi teknologi yang telah dihasilkan oleh perusahaan sebaiknya diidentifikasi berdasarkan pengalaman dan pengetahuan tentang fungsi teknologi tersebut dan kebermanfaatannya bagi perusahaan'),
+(314, 314, 'Melakukan perekrutan terhadap individu yang memiliki keahlian untuk menjadi kunci keberhasilan suatu proyek yang terdapat pada perusahaan'),
+(315, 315, 'Meningkatkan kualitas dokumentasi dan pengambilan keputusan terkait TI pada perusahaan'),
+(316, 316, 'Melakukan pendekatan secara terstruktur guna mengidentifikasi kebutuhan dan solusi teknologi yang selaras dengan bisnis perusahaan'),
+(317, 317, 'Melakukan pendekatan secara jelas dan terstruktur guna mengidentifikasi ketersediaan solusi teknologi yang terdapat pada perusahaan'),
+(318, 318, 'Mempertimbangkan alternatif yang dievaluasi terhadap kebutuhan bisnis, peluang teknologi, kelayakan ekonomi, penilaian risiko, serta faktor lainnya untuk melakukan pendekatan dalam mengidentifikasi solusi teknologi'),
+(319, 319, 'Solusi teknologi yang digunakan pada beberapa proyek perusahaan ditentukan berdasarkan pertimbangan faktor sebagai berikut: keterlibatan anggota staf dalam pengambilan keputusan, jumlah waktu manajemen yang diberikan, serta ukuran dan prioritas kebutuhan b'),
+(320, 320, 'Melakukan pendekatan secara terstruktur guna mengidentifikasi kebutuhan dan solusi teknologi yang selaras dengan bisnis perusahaan'),
+(321, 321, 'Menggunakan metodologi yang sesuai dengan standar guna melakukan identifikasi dan penilaian solusi teknologi yang terdapat pada perusahaan, dimana solusi tersebut biasanya digunakan untuk sebagian besar proyek pada perusahaan'),
+(322, 322, 'Melakukan dokumentasi proyek yang memiliki kualitas yang baik dan mendapatkan persetujuan dari setiap tingkatan yang terdapat pada perusahaan'),
+(323, 323, 'Menjadikan kebutuhan pada perusahaan bersifat jelas dengan dokumentasi yang baik serta terstruktur dengan menggunakan struktur yang telah didefinisikan oleh perusahaan'),
+(324, 324, 'Mempertimbangkan alternatif solusi teknologi yang dihasilkan oleh perusahaan, termasuk pertimbangan analisis mengenai biaya dan manfaat yang akan diperoleh oleh perusahaan'),
+(325, 325, 'Menggunakan metodologi yang didefiniskan secara jelas serta mudah dipahami dan diukur'),
+(326, 326, 'Menambahkan antarmuka yang didefinisikan secara jelas yang terdapat di antara manajemen teknologi dan bisnis perusahaan dalam proses identifikasi dan penilaian solusi teknologi yang terdapat pada perusahaan'),
+(327, 327, 'Menggunakan metodologi yang didefinisikan secara jelas guna mengidentifikasi dan menilai solusi teknologi yang bertujuan untuk perbaikan berkelanjutan'),
+(328, 328, 'Meningkatkan fleksibilitas pada proses akuisisi dan implementasi metodologi baik untuk proyek skala kecil sampai dengan proyek dengan skala besar'),
+(329, 329, 'Menggunakan metodologi yang didukung oleh pengetahuan database baik internal maupun eksternal dimana berisi materi referensi dan solusi teknologi yang selaras dengan bisnis perusahaan'),
+(330, 330, 'Menggunakan metodologi yang menghasilkan dokumentasi yang strukturnya telah ditentukan sebelumnya sehingga dapat bermanfaat dalam aspek produksi dan pemeliharaan yang menjadi lebih efisien'),
+(331, 331, 'Pandai dalam mengidentifikasi peluang baru pada bidang teknologi guna memanfaatkannya untuk mendapatkan keunggulan kompetitif, mempengaruhi rekayasa ulang proses bisnis, serta meningkatkan efisiensi pada keseluruhan perusahaan'),
+(332, 332, 'Mendeteksi dan bertindak secara tanggap apabila solusi teknologi telah disetujui namun tanpa adanya pertimbangan teknologi alternatif dan kebutuhan fungsional bisnis pada perusahaan'),
+(333, 333, 'Melakukan proses desain dan spesifikasi pada proses pembuatan aplikasi perusahaan'),
+(334, 334, 'Melakukan pertimbangan yang matang terkait pengadaan aplikasi pada perusahaan dengan mempertimbangkan kebutuhan sebenarnya yang memang sedang diperlukan oleh perusahaan sekarang tanpa fokus memperhatikan: penawaran vendor, pengenalan pada merek tertentu at'),
+(335, 335, 'Memiliki kesadaran dalam proses akuisisi dan pemeliharaan aplikasi pada perusahaan'),
+(336, 336, 'Melakukan pendekatan yang bervariasi dari proyek satu ke proyek yang lainnya guna akuisisi dan pemeliharaan aplikasi perangkat lunak'),
+(337, 337, 'Melakukan pemeliharaan dan memberikan dukungan terhadap solusi kebutuhan bisnis yang diperoleh secara independen'),
+(338, 338, 'Melakukan proses akuisisi dan pemeliharaan aplikasi yang terdapat pada perusahaan berdasarkan keahlian yang dimiliki khususnya dalam bidang fungsi teknologi informasi'),
+(339, 339, 'Meningkatkan keterampilan dan pengalaman pegawai dalam bidang teknologi informasi agar tingkat keberhasilan dalam hal aplikasi dapat meningkat'),
+(340, 340, 'Menjaga dan meningkatkan pengetahuan internal terkait teknologi informasi pada perusahaan agar perawatannya tidak mengalami masalah dalam perjalanannya'),
+(341, 341, 'Mempertimbangkan ketersediaan dan keamanan aplikasi yang terdapat pada perusahaan dalam hal desain atau akuisisi aplikasi perangkat lunak'),
+(342, 342, 'Melakukan akuisisi dan pemeliharaan terhadap aplikasi yang terdapat pada perusahaan dengan proses yang jelas, terdefinisi, dan dapat dipahami dengan mudah'),
+(343, 343, 'Melakukan akuisisi dan pemeliharaan terhadap aplikasi yang terdapat pada perusahaan dimana prosesnya selaras dengan strategi bisnis dan teknologi informasi perusahaan'),
+(344, 344, 'Menerapkan proses akuisisi dan pemeliharaan yang terdokumentasi dengan baik serta konsisten pada aplikasi dan proyek yang terdapat pada perusahaan'),
+(345, 345, 'Menggunakan metodologi yang fleksibel dalam proses akuisisi dan pemeliharaan aplikasi yang terdapat pada perusahaan'),
+(346, 346, 'Melakukan pemeliharaan aplikasi yang terdapat pada perusahaan dengan perencanaan, penjadwalan, dan koordinasi yang baik'),
+(347, 347, 'Menggunakan metodologi yang bersifat formal dan mudah dipahami dalam proses akuisisi dan pemeliharaan aplikasi dengan memperhatikan proses desain dan spesifikasi, kriteria akuisisi, proses pengujian, dan persyaratan dokumentasi'),
+(348, 348, 'Memastikan mekanisme persetujuan perusahaan didokumentasikan dan disetujui dengan baik guna membuktikan bahwa semua langkah telah diikuti dan pengecualian yang telah ditentukan telah disetujui oleh berbagai pihak'),
+(349, 349, 'Memastikan SOP dan praktik yang terdapat pada perusahaan telah berkembang dan selaras dengan bisnis perusahaan serta dapat digunakan oleh seluruh pegawai dan dapat diaplikasikan pada sebagian besar kebutuhan aplikasi'),
+(350, 350, 'Melakukan akuisisi dan pemeliharaan aplikasi yang terdapat pada perusahaan dengan proses yang selaras dengan proses yang telah ditentukan oleh perusahaan'),
+(351, 351, 'Melakukan pendekatan yang bersifat component-based pada proses akuisisi dan pemeliharaan aplikasi dengan metode yang telah ditentukan sebelumnya serta disesuaikan dengan kebutuhan bisnis perusahaan'),
+(352, 352, 'Melakukan pendekatan yang mendukung proses bisnis perusahaan, arus informasi, pelaporan, dan analitik data dalam perusahaan pada proses akuisisi dan pemeliharaan aplikasi'),
+(353, 353, 'Menggunakan metodologi pada proses akuisisi dan pemeliharaan aplikasi yang bersifat canggih dan memungkinkan adanya proses deployment yang cepat, memungkinkan fleksibilitas dan responsif yang tinggi dalam menanggapi perubahan kebutuhan bisnis perusahaan'),
+(354, 354, 'Melakukan proses perbaikan pada proses akuisisi aplikasi perangkat lunak perusahaan dan implementasi metodologi dengan intensitas yang terus menerus dan didukung oleh pengetahuan tentang ilmu database baik internal maupun eksternal dengan referensi yang me'),
+(355, 355, 'Menggunakan metodologi pada proses akuisisi dan pemeliharaan aplikasi dengan proses pembuatan dokumentasi yang menggunakan struktur yang telah ditentukan oleh perusahaan sehingga dapat membuat proses produksi dan pemeliharaan menjadi lebih efisien'),
+(356, 356, 'Menjadikan proses pengelolaan insrastruktur teknologi pada perusahaan menjadi prioritas yang cukup penting untuk diperhatikan oleh perusahaan'),
+(357, 357, 'Membuat rencana yang telah melalui proses diskusi yang matang pada keseluruhan komponennya sehingga proses perubahan yang dilakukan pada infrastruktur teknologi setiap kali adanya aplikasi baru dapat berjalan dengan baik'),
+(358, 358, 'Melakukan pendekatan yang konsisten secara keseluruhan pada proses akuisisi dan pemeliharaan infrastruktur teknologi dengan kesadaran bahwa kedua proses tersebut merupakan hal yang penting bagi perusahaan'),
+(359, 359, 'Memastikan bahwa proses pemeliharaan infrastruktur teknologi pada perusahaan telah memiliki pengaruh terhadap kebutuhan jangka-pendek perusahaan'),
+(360, 360, 'Memastikan lingkungan produksi yang terdapat pada perusahaan merupakan lingkungan yang dapat dijadikan juga sebagai lingkungan pengujian'),
+(361, 361, 'Melakukan akuisisi dan pemeliharaan infrastruktur teknologi pada perusahaan dengan proses yang jelas, terdefinisi, dan mudah dipahami'),
+(362, 362, 'Melakukan akuisisi dan pemeliharaan infrastruktur teknologi dengan pertimbangan kebutuhan aplikasi bisnis perusahaan serta didasarkan pada strategi yang telah ditentukan oleh perusahaan'),
+(363, 363, 'Memberikan pemahaman kepada seluruh pegawai perusahaan bahwa infrastruktur teknologi merupakan aspek yang penting sehingga perlu adanya dukungan oleh beberapa praktik formal'),
+(364, 364, 'Melakukan aktivitas pemeliharaan infrastruktur teknologi yang terjadwalkan dan terkoordinasi'),
+(365, 365, 'Perusahaan mengusahakan bahwa terdapat lingkungan pengujian yang terpisah dari seluruh lingkungan yang terdapat pada perusahaan'),
+(366, 366, 'Melakukan akuisisi dan pemeliharaan infrastruktur teknologi dengan proses yang jelas, terdefinisi, dan dipahami secara umum'),
+(367, 367, 'Melakukan akuisisi dan pemeliharaan infrastruktur teknologi yang mendukung akan adanya kebutuhan aplikasi bisnis yang penting dan sejalan dengan strategi bisnis dan teknologi informasi perusahaan dimana penerapannya dilakukan secara konsisten'),
+(368, 368, 'Melakukan aktivitas pemeliharaan infrastruktur teknologi yang terjadwalkan dan terkoordinasi'),
+(369, 369, 'Memisahkan lingkungan yang digunakan untuk produksi pada perusahaan dengan lingkungan yang digunakan untuk pengujian'),
+(370, 370, 'Melakukan akuisisi dan pemeliharaan infrastruktur teknologi yang dapat bekerja dengan baik pada berbagai situasi dan dapat diikuti secara konsisten serta memiliki fokus pada fungsi reusability yaitu kemampuan teknologi untuk digunakan kembali komponen tekn'),
+(371, 371, 'Memiliki infrastruktur teknologi yang dapat mendukung aplikasi bisnis perusahaan');
+INSERT INTO `rekomendasi` (`id_rekomendasi`, `id_pertanyaan`, `rekomendasi`) VALUES
+(372, 372, 'Melakukan akuisisi dan pemeliharaan teknologi yang terorganisir dengan baik serta bersifat proaktif'),
+(373, 373, 'Mengoptimalkan biaya dan waktu yang digunakan untuk mencapai tingkat skalabilitas, fleksibilitas, dan integrasi yang diharapkan oleh perusahaan'),
+(374, 374, 'Melakukan proses akuisisi dan pemeliharaan teknologi yang bersifat proaktif dan selaras dengan aplikasi bisnis serta arsitektur teknologi yang penting bagi perusahaan'),
+(375, 375, 'Mengikuti dengan baik praktik dari solusi teknologi yang dihasilkan oleh perusahaan serta dapat mengetahui bagaimana perkembangan platform dan alat manajemen terbaru'),
+(376, 376, 'Menggunakan teknologi otomatisasi guna mengutangi biaya pengeluaran perusahaan dengan metode rasionalisasi dan standarisasi komponen infrastruktur teknologi perusahaan'),
+(377, 377, 'Meningkatkan tingkat kesadaran teknis yang dimiliki oleh perusahaan agar dapat mengidentifikasi cara yang optimal dalam hal peningkatan kinerja'),
+(378, 378, 'Mengoptimalkan penggunaan infrastruktur teknologi pada perusahaan agar dapat menjadi pendorong utama untuk pemanfaatan teknologi informasi secara optimal'),
+(379, 379, 'Melakukan dokumentasi pengoperasian aplikasi yang terdapat pada perusahaan dengan adanya dokumen dokumentasi pengoperasian, user manual, dan materi pelatihan'),
+(380, 380, 'Tidak menggunakan aplikasi yang berbayar dalam menghimpun bahan materi pengoperasian aplikasi sehingga dibutuhkan adanya aplikasi milik perusahaan sendiri untuk menghimpun hal tersebut'),
+(381, 381, 'Menumbuhkan kesadaran kepada seluruh pihak yang ada dalam perusahaan akan pentingnya pembuatan dokumentasi pengoperasian aplikasi yang terdapat pada perusahaan'),
+(382, 382, 'Membuat dokumentasi pengoperasian aplikasi dengan proses yang terjadwalkan dimana dokumentasi ditujukan kepada seluruh bagian staf yang terdapat pada perusahaan'),
+(383, 383, 'Memperbarui dokumen pengoperasian aplikasi yang terdapat pada perusahaan apabila dokumen yang sekarang merupakan dokumen yang sudah lama'),
+(384, 384, 'Melakukan pelatihan terhadap staf perusahaan terkait pengoperasian aplikasi yang terdapat pada perusahaan dengan penjadwalan yang rutin'),
+(385, 385, 'Membuat SOP yang mengintegrasikan antara sistem yang dibangun oleh perusahaan dengan unit bisnis perusahaan'),
+(386, 386, 'Melakukan pertemuan yang terjadwalkan guna menghimpun masukan dari unit bisnis terkait metode untuk meningkatkan rancangan program pelatihan pengoperasian aplikasi pada perusahaan'),
+(387, 387, 'Melakukan pendekatan berdasarkan kerangka kerja yang dibangun secara terstruktur guna membuat SOP dan dokumentasi pengoperasian aplikasi yang terdapat pada perusahaan'),
+(388, 388, 'Melakukan pengembangan pembuatan SOP dan dokumentasi pengoperasian aplikasi pada perusahaan yang berdasarkan dengan bagaimana kondisi perusahaan sekarang'),
+(389, 389, 'Koordinator Staff TI melakukan pengawasan terhadap pembuatan materi pelatihan pengoperasian aplikasi yang terdapat pada perusahaan'),
+(390, 390, 'Meningkatkan konsistensi dan integrasi SOP dan dokumentasi pengoperasian aplikasi yang terdapat pada perusahaan guna mendapat penilaian yang baik dari pengguna terhadap hal tersebut'),
+(391, 391, 'Menyediakan dan memanfaatkan dengan baik program pelatihan pengoperasian aplikasi yang telah dibuat pleh perusahaan dimana program tersebut ditujukan kepada pengguna'),
+(392, 392, 'Menggunakan kerangka kerja yang jelas, terdefinisi, diterima dan mudah dipahami guna membuat dokumentasi pengoperasian aplikasi, petunjuk operasi, dan materi pelatihan'),
+(393, 393, 'Memiliki tempat penyimpanan yang baik guna menyimpan SOP dan dokumentasi pengoperasian aplikasi dimana tempat penyimpanan tersebut dapat diakses dengan mudah oleh seluruh staf perusahaan'),
+(394, 394, 'Melakukan perbaikan SOP dan dokumentasi pengoperasian aplikasi pada perusahaan secara berkala yang berdasarkan pada respon pengguna'),
+(395, 395, 'Menyiapkan tempat penyimpanan dokumen SOP dan dokumentasi pengoperasian aplikasi pada perusahaan secara offline agar dapat diakses di saat perusahaan menemui keadaan yang darurat'),
+(396, 396, 'Melakukan pembaruan SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan ketika terjadi perubahan pada aplikasi'),
+(397, 397, 'Memberikan kontrol dalam hal mematuhi standar agar pendekatan yang dilakukan pada proses pembuatan SOP dan dokumentasi pengoperasian aplikasi pada perusahaan tidak bervariasi banyak'),
+(398, 398, 'Melibatkan pengguna dalam proses pembuatan SOP dan dokumentasi pengoperasian aplikasi pada perusahaan'),
+(399, 399, 'Meningkatkan penggunaan alat otomatisasi yang digunakan pada proses pembuatan distribusi SOP dan dokumentasi pengoperasian aplikasi pada perusahaan'),
+(400, 400, 'Merencanakan dan menjadwalkan pelatihan bisnis dan pengguna terhadap proses pembuatan SOP dan dokumentasi pengoperasian aplikasi pada perusahaan'),
+(401, 401, 'Memanfaatkan kerangka kerja dan teknologi informasi untuk proses mantain SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan'),
+(402, 402, 'Melakukan pendekatan pada proses maintain SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan agar dapat mencakup semua sistem dan unit bisnis perusahaan'),
+(403, 403, 'Membuat antarmuka yang interaktif dan hubungan yang terintegrasi pada SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan'),
+(404, 404, 'Melakukan pengawasan terhadap pengembangan dan pemeliharaan proses yang terjadi pada SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan serta kontrol guna memastikan kepatuhan terhadap standar yang telah ditentukan'),
+(405, 405, 'Menampung tanggapan atau respon yang diberikan oleh pengguna atau unit bisnis terkait dokumentasi dan program pelatihan pengoperasian aplikasi pada perusahaan'),
+(406, 406, 'Memastikan ketersediaan dan reiabilitas pada dokumentasi dan pelatihan bahan ajar pengoperasian aplikasi pada perusahaan dalam kondisi yang baik'),
+(407, 407, 'Memanfaatkan teknologi otomatisasi untuk mengimplementasikan proses yang akan digunakan pada dokumen prosedur dan manajemen pada perusahaan'),
+(408, 408, 'Mengembangkan SOP dan dokumen bahan ajar pelatihan menjadi terintegrasi dengan sistem aplikasi dimana pengguna memiliki akses terhadap hal tersebut'),
+(409, 409, 'Memiliki peran yang aktif dalam hal pelatihan pengoperasian aplikasi pada perusahaan yang ditujukan kepada pengguna dan unit bisnis dimana ketentuannya sesuai dengan kebutuhan bisnis perusahaan'),
+(410, 410, 'Mengukur bagaimana perkembangan dan penyampaian dari bahan ajar dan program pelatihan pengguna dengan menggunakan metrik perangkat lunak yang disediakan oleh manajemen teknologi informasi perusahaan'),
+(411, 411, 'Melakukan eksplorasi terhadap metode yang digunakan pada user manual dan dokumentasi pengoperasian aplikasi pada perusahaan agar dapat mengalami peningkatan secara berkala'),
+(412, 412, 'Melakukan pembaruan SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan secara berkelanjutan yang sesuai dengan ilmu terkini sehingga akan melibatkan alur kerja, distribusi teknologi, dan kemudahan akses'),
+(413, 413, 'Melakukan pembaruan SOP dan materi pelatihan pengoperasian aplikasi pada perusahaan secara berkala agar dapat mencerminkan adanya perubahan organisasi, operasional, dan perangkat lunak pada perusahaan'),
+(414, 414, 'Melakukan pengembangan terhadap dokumentasi dan materi pelatihan pengoperasian aplikasi pada perusahaan serta mengintegrasikan penyampaian tentang program pelatihan dengan proses bisnis perusahaan sehingga akan dapat mendukung kebutuhan perusahaan yang ber'),
+(415, 415, 'Melakukan proses pengadaan sumber daya teknologi informasi yang telah ditentukan oleh perusahaan'),
+(416, 416, 'Membuat kebijakan dan prosedur pengadaan yang jelas guna memastikan bahwa seluruh sumber daya teknologi informasi telah tersedia secara tepat waktu dan hemat biaya'),
+(417, 417, 'Mendokumentasikan kebijakan dan prosedur yang menghubungkan akuisisi teknologi dengan proses pengadaan bisnis secara keseluruhan'),
+(418, 418, 'Sebagai penerapan prosedur dan kebijakan formal perusahaan, dilakukan adanya pengembangan kontrak untuk akuisisi sumber daya teknologi informasi dan pengelolaannya dilakukan oleh manajer proyek atau individu yang lain'),
+(419, 419, 'Menciptakan hubungan antara proses akuisisi teknologi informasi pada perusahaan dengan proses manajemen kontrak dan teknologi informasi dengan baik, tanpa terikat oleh jangka waktu tertentu'),
+(420, 420, 'Mengelola kontrak akuisisi teknologi perusahaan secara berkelanjutan'),
+(421, 421, 'Membuat kebijakan dan prosedur guna melakukan implementasi akuisisi teknologi informasi pada perusahaan'),
+(422, 422, 'Mengintegrasikan kebijakan dan prosedur dengan proses akuisisi teknologi ingormasi pada perusahaan secara keseluruhan'),
+(423, 423, 'Akuisisi sumber daya teknologi informasi tidak hanya digunakan dalam proyek yang besar saja melainkan digunakan baik dalam proyek kecil, sedang, sampai besar agar seluruh proyek dengan tingkatan apapun itu dapat berjalan secara optimal'),
+(424, 424, 'Setiap pihak memiliki tanggung jawab dan akuntabilitas yang dapat diterapkan dalam proses akuisisi teknologi informasi dan manajemen kontrak perusahaan'),
+(425, 425, 'Memiliki kesadaran untuk memiliki manajemen pemasok dan manajemen hubungan di dalam perusahaan'),
+(426, 426, 'Proses kontrak tidak hanya digunakan dalam proyek yang besar saja melainkan digunakan baik dalam proyek kecil, sedang, sampai besar agar seluruh proyek dengan tingkatan apapun itu dapat berjalan secara optimal'),
+(427, 427, 'Menerapkan kebijakan dan prosedur terhadap proses akuisisi teknologi informasi pada perusahaan'),
+(428, 428, 'Membuat kebijakan dan prosedur terkait proses akuisisi teknologi informasi dengan dipandu oleh proses pengadaan bisnis perusahaan secara keseluruhan'),
+(429, 429, 'Mengintegrasikan sistem akuisisi bisnis pada perusahaan dengan proses akuisisi teknologi informasi pada perusahaan secara keseluruhan'),
+(430, 430, 'Menerapkan standar tentang teknologi informasi yang akan digunakan dalam proses akuisisi sumber daya teknologi informasi pada perusahaan'),
+(431, 431, 'Mengintegrasikan pemasok sumber daya teknologi informasi perusahaan ke dalam mekanisme manajemen proyek dengan perspektif manajemen kontrak'),
+(432, 432, 'Mengkomunikasikan kepada seluruh staf manajemen teknologi informasi terkait kebutuhan proses akuisisi teknologi informasi dan proses pada manajemen kontrak (perencanaan, pelaksanaan, monitoring, pembayaran hasil pekerjaan hingga proses evaluasi atas hasil '),
+(433, 433, 'Mengintegrasikan sistem pengadaan bisnis perusahaan dengan proses akuisisi teknologi informasi secara keseluruhan'),
+(434, 434, 'Menggunakan standar teknologi informasi yang telah ditentukan pada proses akuisisi sumber daya teknologi informasi untuk seluruh proses pengadaan bisnis perusahaan'),
+(435, 435, 'Mengukur kontrak dan manajemen pengadaan bisnis perusahaan dengan pengambilan yang relevan dengan kasus bisnis yang digunakan pada proses akuisisi teknologi informasi pada perusahaan'),
+(436, 436, 'Melakukan aktivitas pelaporan terhadap proses akuisisi teknologi informasi pada perusahaan dimana proses pelaporannya mendukung tujuan bisnis dari perusahaan'),
+(437, 437, 'Membuat pengecualian terhadap kebijakan dan prosedur proses akuisisi teknologi informasi serta mengkomunikasikan dengan baik kepada pihak manajemen'),
+(438, 438, 'Mengembangkan manajemen hubungan yang strategis'),
+(439, 439, 'Menerapkan manajemen teknologi informasi pada perusahaan dengan memanfaatkan manajemen kontrak dan proses akuisisi teknologi informasi untuk keseluruhan akuisisi dengan melakukan pengawasan pada pengukuran kinerja'),
+(440, 440, 'Melakukan proses pengadaan sumber daya teknologi informasi pada perusahaan secara menyeluruh untuk proses akuisisi teknologi informasi'),
+(441, 441, 'Bersikap tegas terhadap kepatuhan kebijakan dan prosedur terkait proses akuisisi teknologi informasi pada perusahaan'),
+(442, 442, 'Mengambil pengukuran manajemen kontrak dan pengadaan dengan ketentuan yang relevan dengan kasus bisnis yang terdapat pada proses akuisisi teknologi informasi pada perusahaan'),
+(443, 443, 'Menjalin hubungan yang baik dengan pemasok dan mitra kerja serta dilakukan pengukuran dan pemantauan terhadap hubungan tersebut agar dapat terus terjalin dengan baik'),
+(444, 444, 'Merencanakan dan mengelola secara strategis agar tercipta hubungan yang baik dengan pemasok dan mitra kerja'),
+(445, 445, 'Mengelola standar, kebijakan, dan prosedur terkait teknologi informasi pada perusahaan secara strategis guna dimanfaatkan dalam proses akuisisi sumber daya teknologi informasi'),
+(446, 446, 'Mengkomunikasikan kepada seluruh staf manajemen teknologi informasi terkait kepentingan yang strategis dari proses akuisisi teknologi informasi yang tepat dan manajemen kontrak pada keseluruhan fungsi teknologi informasi'),
+(447, 447, 'Melakukan proses manajemen terhadap perubahan yang terjadi pada perusahaan dengan proses yang telah ditentukan oleh perusahaan serta melakukan kontrol terhadap perubahan yang terjadi'),
+(448, 448, 'Menumbuhkan kesadaran tentang dampak negatif yang dapat ditimbulkan dari adanya perubahan bagi perusahaan terutama terhadap operasi bisnis dan teknologi informasi serta tentang dampak positif yang dapat ditimbulkan dari proses manajemen perubahan yang baik'),
+(449, 449, 'Melakukan pengelolaan dan pengawasan terhadap setiap perubahan yang terjadi pada perusahaan'),
+(450, 450, 'Mengelola dengan baik perubahan yang terjadi pada perusahaan dengan rintangan berupa keberagaman bidang urusan pada perusahaan agar dapat terhindar dari pengelolaan perubahan yang terbengkalai dan tidak sah'),
+(451, 451, 'Membuat dokumentasi dari setiap perubahan yang terjadi pada perusahaan dan memastikan konfigurasi dari dokumentasi tersebut dibuat dengan selengkap mungkin'),
+(452, 452, 'Mengelola manajemen perubahan dengan baik guna meminimalisir kesalahan yang mungkin dapat terjadi akibat pengelolaan yang buruk'),
+(453, 453, 'Melakukan proses manajemen terhadap perubahan yang terjadi pada perusahaan dengan terstruktur, mendasar, dan semaksimal mungkin menghindari kesalahan yang mungkin terjadi'),
+(454, 454, 'Melakukan perencanaan dan perhitungan secara matang terhadap dampak yang mungkin terjadi akibat perubahan yang terjadi pada perusahaan serta konfigurasi dokumentasinya dilakukan secara konsisten'),
+(455, 455, 'Melakukan proses manajemen terhadap perubahan yang terjadi pada perusahaan yaitu meliputi aktivitas kategorisasi, prioritisasi, prosedur darurat, autorisasi perubahan, dan manajemen pelepasan yang selaras dengan perkembangan perusahaan saat ini'),
+(456, 456, 'Konsisten dalam melakukan proses manajemen terhadap setiap perubahan yang terjadi pada perusahaan walaupun workaround (solusi sementara terhadap suatu masalah) telah ditemukan'),
+(457, 457, 'Meminimalisir kesalahan yang terjadi akibat perubahan yang tidak terkelola dengan baik pada perusahaan'),
+(458, 458, 'Melakukan analisis terhadap dampak dari perubahan yang terjadi pada bidang teknologi informasi khususnya dampak pada operasi bisnis guna mendukung proses perencanaan aplikasi dan teknologi baru perusahaan'),
+(459, 459, 'Mengembangkan proses manajemen terhadap setiap perubahan yang terjadi pada perusahaan dengan baik dan konsisten'),
+(460, 460, 'Menggunakan prosedur dan kontrol secara otomatis guna memastikan mutu dalam proses manajemen terhadap setiap perubahan pada perusahaan telah tercapai sesuai dengan target perusahaan'),
+(461, 461, 'Melakukan proses manajemen terhadap setiap perubahan yang terjadi pada perusahaan dengan perencanaan yang matang dan menyeluruh serta dilakukan penilaian terhadap dampak yang timbul guna meminimalkan kemungkinan masalah pasca-produksi'),
+(462, 462, 'Melakukan perubahan pada perusahaan dengan persetujuan seluruh pihak yang bersangkutan dan telah sesuai dengan aturan yang ditentukan oleh perusahaan'),
+(463, 463, 'Mendokumentasikan proses manajemen pada setiap perubahan yang terjadi pada perusahaan dengan metode yang tepat dan akurat serta dengan proses tracking pada setiap perubahannya'),
+(464, 464, 'Mendokumentasikan konfigurasi pada teknologi informasi perusahaan dengan metode yang tepat dan akurat'),
+(465, 465, 'Mengintegrasikan proses perencanaan dan implementasi manajemen perubahan dengan perubahan dalam proses bisnis guna menjamin proses training, perubahan organisasi perusahaan, dan persoalan kelancaran bisnis agar lebih terkelola'),
+(466, 466, 'Mengkoordinasikan dengan lebih intensif antara proses manajemen perubahan teknologi informasi pada perusahaan dengann perancangan proses bisnis baru'),
+(467, 467, 'Melakukan pengawasan mutu dan kinerja proses manajemen terhadap setiap perubahan pada perusahaan secara rutin dan konsisten'),
+(468, 468, 'Melakukan proses manajaemen terhadap setiap perubahan yang terjadi pada perusahaan secara teratur serta rutin dilakukan peninjauan dan pembaruan agar tetap selaras dengan visi dan misi perusahaan'),
+(469, 469, 'Melakukan peninjauan terhadap proses manajemen pada setiap perubahan yang terjadi pada perusahaan sehingga hasilnya dapat menjadi bahan monitoring'),
+(470, 470, 'Menyediakan informasi mengenai konfigurasi proses manajemen perubahan dengan berbasis komputer serta menyediakan juga kendali versi/control versionnya (sistem pengelolaan perubahan yang terjadi pada perusahaan)'),
+(471, 471, 'Menggunakan teknologi yang canggih dalam proses tracking perubahan yang terjadi pada perusahaan dan proses deteksi perangkat lunak mana saja yang tidak sah dan tidak berlisensi'),
+(472, 472, 'Mengintegrasikan proses manajemen pada setiap perubahan dengan proses manajemen bisnis perusahaan guna memastikan kesadaran akan teknologi informasi sebagai aspek penting dalam peningkatan produktivitas dan penciptaan kesempatan bisnis baru bagi perusahaan'),
+(473, 473, 'Melakukan proses instalasi dan akreditasi secara resmi oleh perusahaan serta memastikan bagian manajemen dan anggota staf teknologi informasi memverifikasi solusi yang diterapkan apakah sudah sesuai atau belum dengan tujuan perusahaan'),
+(474, 474, 'Melakukan verifikasi dan konfirmasi solusi yang diterapkan pada perusahaan apakah sudah memenuhi tujuan perusahaan atau belum'),
+(475, 475, 'Melakukan pengujian dengan kesadaran yang dimiliki oleh setiap individu tanpa terkecuali satu pun dengan metode pendekatan yang tepat'),
+(476, 476, 'Pengadaan proses akreditasi dan persetujuan secara resmi oleh perusahaan'),
+(477, 477, 'Melakukan pendekatan terhadap proses pengujian dan akreditasi secara konsisten dan berdasarkan pada metodologi yang ditentukan oleh perusahaan'),
+(478, 478, 'Melakukan pendekatan terhadap proses pengujian dengan keputusan yang diambil secara bersama-sama oleh tim pengembang serta mengintegrasikan proses pengujian tersebut'),
+(479, 479, 'Persetujuan yang dilakukan terhadap proses pengujian dan akreditasi dilakukan secara formal oleh perusahaan'),
+(480, 480, 'Menerapkan metodologi yang resmi dimana berkaitan dengan proses instalasi, migrasi, konversi, dan penerimaan pada proses instalasi dan akreditasi teknologi informasi pada perusahaan'),
+(481, 481, 'Mengintegrasikan proses instalasi dan akreditasi teknologi informasi dengan siklus hidup sistem tersebut serta melakukan otomatisasi sampai pada batas tertentu'),
+(482, 482, 'Melakukan proses pelatihan, pengujian, dan transisi ke status produksi serta proses akreditasi berdasarkan proses yang telah ditentukan oleh perusahaan'),
+(483, 483, 'Memastikan kualitas sistem yang telah memasuki tahap produksi agar kualitas yang dihasilkan dapat konsisten, salah satunya adalah melalui pengecekan sistem yang baru agar tidak menimbulkan masalah pasca-implementasi secara signifikan'),
+(484, 484, 'Mengembangkan dan meresmikan prosedur pada proses pengujian dan akreditasi agar dapat terorganisir dengan baik dan praktis dengan lingkungan proses pengujian dan akreditasi'),
+(485, 485, 'Menggunakan pendekatan formal pada setiap perubahan yang terjadi pada perusahaan dalam hal praktiknya'),
+(486, 486, 'Melakukan standarisasi dan pengukuran pada evaluasi terhadap proses pemenuhan kebutuhan dari pengguna agar dapat menghasilkan metrik evaluasi sehingga dapat dilakukan peninjauan dan analisa secara efektif'),
+(487, 487, 'Memastikan kualitas sistem yang memasuki tahap produksi agar dapat menghasilkan kualitas yang memuaskan pihak manajemen bahkan dengan tingkat masalah pasca-implementasi'),
+(488, 488, 'Melakukan otomatisasi pada proses pengujian dan akreditasi dengan otomatisasi yang bersifat ad hoc serta bergantung pada proyek masing-masing'),
+(489, 489, 'Terus berusaha meningkatkan efisiensi pada proses pengujian dan akreditasi agar dapat meminimalisir kekurangan yang mungkin terjadi'),
+(490, 490, 'Membuat sistem pengujian pada perusahaan telah mencerminkan lingkungan hidup secara memadai'),
+(491, 491, 'Melakukan stress testing (menguji ketahanan suatu perusahaan atas suatu kondisi yang merugikan dan sangat berisiko) terhadap sistem yang baru serta melakukan pengujian regresi (pengujian terhadap perangkat lunak secara menyeluruh dan sedetail mungkin) terh'),
+(492, 492, 'Menyempurnakan proses instalasi dan akreditasi ke tingkat praktik yang lebih baik dengan dilakukan secara rutin berdasarkan hasil evaluasi penyempurnaan sebelumnya dan penyempurnaan yang berkelanjutan'),
+(493, 493, 'Mengintegrasikan proses instalasi dan akreditasi teknologi informasi dengan siklus hidup sistem tersebut serta melakukan otomatisasi jika memang dirasa telah sesuai, telah memfasilitasi pelatihan, pengujian, dan transisi yang efisien ke status produksi dar'),
+(494, 494, 'Mengembangkan lingkungan pengujian dengan baik serta memastikan proses register permasalahan dan penyelesaian kesalahan agar bertransisi ke lingkungan produksi secara efisien dan efektif'),
+(495, 495, 'Melakukan proses akreditasi dengan koreksi kecil pada kesalahan yang terjadi pada tahap pasca-implementasi sehingga prosesnya dikerjakan tanpa adanya pengerjaan ulang'),
+(496, 496, 'Melakukan standarisasi terhadap proses peninjauan pasca-implementasi dengan menyalurkan kembali pelajaran yang dapat dipetik sebelumnya sehingga dapat meningkatkan kualitas yang berkelanjutan'),
+(497, 497, 'Menerapkan secara konsisten aktivitas stress testing (menguji ketahanan suatu perusahaan atas suatu kondisi yang merugikan dan sangat berisiko) terhadap sistem yang baru serta pengujian regresi (pengujian terhadap perangkat lunak secara menyeluruh dan sede'),
+(498, 498, 'Manajemen membuat level dari layanan.'),
+(499, 499, 'Perusahaan menentukan penanggungjawab lonitor lever dari layanan.'),
+(500, 500, 'Perusahaan membuat prosedur pengaturan level layanan perusahaan.'),
+(501, 501, 'Perusahaan menentukan penanggungjawab untuk menentukan dan mengelola layanan perusahaan.'),
+(502, 502, 'Perusahaan membuat prosedur resmi untuk mengukur layanan perusahaan secara berkala, baik secara kualitatif maupun kuantitatif.'),
+(503, 503, 'Perusahaan membuat prosedur resmi untuk melakukan pelaporan mengenai level dari layanan perusahaan secara berkala.'),
+(504, 504, 'Level layanan di perusahaan dibuat secara formal dan direview.'),
+(505, 505, 'Perusahaan membuat template resmi laporan mengenai level dari layanan perusahaan.'),
+(506, 506, 'Perusahaan membuat prosedur resmi untuk melakukan pelaporan mengenai level dari layanan perusahaan secara berkala.'),
+(507, 507, 'Kewenangan koordinator level layanan diberikan luas.'),
+(508, 508, 'Penyusunan Service Level Assignment (SLA) dibuat secara terikat.'),
+(509, 509, 'Perusahaan membuat definisi tanggung jawab dan wewenang koordinator level layanan.'),
+(510, 510, 'Perusahaan mengembangkan Service Level Arrangement (SLA).'),
+(511, 511, 'Perusahaan membuat standar dokumentasi dari layanan dan level layanan.'),
+(512, 512, 'Perusahaan membuat prosedur formal untuk menangani kekurangan dari level layanan.'),
+(513, 513, '?'),
+(514, 514, 'Perusahaan membuat level layanan yang sejalan dengan kebutuhan bisnis.'),
+(515, 515, 'Perusahaan sebaiknya menentukan level layanan pada fase penetuan kebutuhan sistem agar sesuai dengan aplikasi dan lingkungan perusahaan.'),
+(516, 516, 'Perusahaan membuat prosedur resmi untuk mengukur layanan perusahaan secara berkala, baik secara kualitatif maupun kuantitatif.'),
+(517, 517, '?'),
+(518, 518, 'Perusahaan membuat prosedur resmi untuk mengukur layanan perusahaan sesuai dengan standar di dunia industri.'),
+(519, 519, 'Perusahaan menentukan level layanan berdasarkan pada ketersediaan, keandalan, performa, kapasitas pertumbuhan, dukungan pengguna, perencanaan berkelanjutan dan pertimbangan keamanan.'),
+(520, 520, 'Root Cause Analysis dilakukan secara rutin.'),
+(521, 521, 'Perusahaan membuat sistem untuk memonitor level layanan sevara otomatis.'),
+(522, 522, 'Perusahaan mendefinisikan resiko operasional dan keuangan dengan jelas, dan disepakati bersama.'),
+(523, 523, 'Perusahaan membuat prosedur resmi untuk mengukur layanan perusahaan secara berkala.'),
+(524, 524, 'Perusahaan membuat prosedur resmi untuk mengukur layanan perusahaan secara berkala.'),
+(525, 525, 'Manajemen level layanan dikembangkan secara berkelanjutan.'),
+(526, 526, 'Perusahaan membuat prosedur resmi untuk memonitor kepuasan pengguna secara berkelanjutan.'),
+(527, 527, '?'),
+(528, 528, 'Menyelaraskan sumber day adan tanggung jawab manajemen IT untuk memenuhi target level layanan.'),
+(529, 529, 'Perusahaan membuat prosedur resmi untuk memonitor matriks pengguna yang dilakukan oleh Manajemen senior.');
 
 --
 -- Indexes for dumped tables
@@ -1004,12 +1440,6 @@ ALTER TABLE `it_resource`
   ADD PRIMARY KEY (`id_it_resource`);
 
 --
--- Indexes for table `jenis_perusahaan`
---
-ALTER TABLE `jenis_perusahaan`
-  ADD PRIMARY KEY (`id_jenis_perusahaan`);
-
---
 -- Indexes for table `mapping_it_resource_process`
 --
 ALTER TABLE `mapping_it_resource_process`
@@ -1022,6 +1452,12 @@ ALTER TABLE `mapping_it_resource_process`
 ALTER TABLE `pertanyaan`
   ADD PRIMARY KEY (`id_pertanyaan`),
   ADD KEY `it_process` (`id_it_process`);
+
+--
+-- Indexes for table `perusahaan`
+--
+ALTER TABLE `perusahaan`
+  ADD PRIMARY KEY (`id_jenis_perusahaan`);
 
 --
 -- Indexes for table `rekomendasi`
@@ -1047,22 +1483,22 @@ ALTER TABLE `it_process`
   MODIFY `id_it_process` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `jenis_perusahaan`
---
-ALTER TABLE `jenis_perusahaan`
-  MODIFY `id_jenis_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `pertanyaan`
 --
 ALTER TABLE `pertanyaan`
-  MODIFY `id_pertanyaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=597;
+  MODIFY `id_pertanyaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=696;
+
+--
+-- AUTO_INCREMENT for table `perusahaan`
+--
+ALTER TABLE `perusahaan`
+  MODIFY `id_jenis_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `rekomendasi`
 --
 ALTER TABLE `rekomendasi`
-  MODIFY `id_rekomendasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id_rekomendasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=530;
 
 --
 -- Constraints for dumped tables
