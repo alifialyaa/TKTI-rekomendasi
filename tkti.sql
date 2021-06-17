@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2021 at 04:41 AM
+-- Generation Time: Jun 17, 2021 at 08:30 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.25
 
@@ -115,6 +115,26 @@ INSERT INTO `it_resource` (`id_it_resource`, `it_resource`) VALUES
 (2, 'Information'),
 (3, 'Infrastructure'),
 (4, 'People');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenis_perusahaan`
+--
+
+CREATE TABLE `jenis_perusahaan` (
+  `id_jenis_perusahaan` int(11) NOT NULL,
+  `nama_jenis_perusahaan` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `jenis_perusahaan`
+--
+
+INSERT INTO `jenis_perusahaan` (`id_jenis_perusahaan`, `nama_jenis_perusahaan`) VALUES
+(1, 'Startup'),
+(2, 'Intermediate'),
+(3, 'Establish');
 
 -- --------------------------------------------------------
 
@@ -851,26 +871,6 @@ INSERT INTO `pertanyaan` (`id_pertanyaan`, `id_it_process`, `pertanyaan`, `level
 -- --------------------------------------------------------
 
 --
--- Table structure for table `perusahaan`
---
-
-CREATE TABLE `perusahaan` (
-  `id_jenis_perusahaan` int(11) NOT NULL,
-  `nama_jenis_perusahaan` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `perusahaan`
---
-
-INSERT INTO `perusahaan` (`id_jenis_perusahaan`, `nama_jenis_perusahaan`) VALUES
-(1, 'Startup'),
-(2, 'Intermediate'),
-(3, 'Establish');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `rekomendasi`
 --
 
@@ -1440,6 +1440,12 @@ ALTER TABLE `it_resource`
   ADD PRIMARY KEY (`id_it_resource`);
 
 --
+-- Indexes for table `jenis_perusahaan`
+--
+ALTER TABLE `jenis_perusahaan`
+  ADD PRIMARY KEY (`id_jenis_perusahaan`);
+
+--
 -- Indexes for table `mapping_it_resource_process`
 --
 ALTER TABLE `mapping_it_resource_process`
@@ -1452,12 +1458,6 @@ ALTER TABLE `mapping_it_resource_process`
 ALTER TABLE `pertanyaan`
   ADD PRIMARY KEY (`id_pertanyaan`),
   ADD KEY `it_process` (`id_it_process`);
-
---
--- Indexes for table `perusahaan`
---
-ALTER TABLE `perusahaan`
-  ADD PRIMARY KEY (`id_jenis_perusahaan`);
 
 --
 -- Indexes for table `rekomendasi`
@@ -1483,16 +1483,16 @@ ALTER TABLE `it_process`
   MODIFY `id_it_process` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
+-- AUTO_INCREMENT for table `jenis_perusahaan`
+--
+ALTER TABLE `jenis_perusahaan`
+  MODIFY `id_jenis_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `pertanyaan`
 --
 ALTER TABLE `pertanyaan`
   MODIFY `id_pertanyaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=696;
-
---
--- AUTO_INCREMENT for table `perusahaan`
---
-ALTER TABLE `perusahaan`
-  MODIFY `id_jenis_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `rekomendasi`
