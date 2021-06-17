@@ -24,7 +24,13 @@ input data yang sudah (pertabel):
 ---
 15.06.21
 - [x] maturity level
-- [ ] rekomendasi
+- [x] rekomendasi
+---
+17.06.21
+Database
+- [ ] pertanyaan (PO1-DS3)
+- [ ] rekomendasi (PO1-DS1)
+
 
 Semangat gaes kita pasti bisa! <3
 
